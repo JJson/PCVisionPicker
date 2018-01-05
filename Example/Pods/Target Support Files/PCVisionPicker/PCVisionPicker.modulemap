@@ -1,0 +1,6 @@
+framework module PCVisionPicker {
+  umbrella header "PCVisionPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

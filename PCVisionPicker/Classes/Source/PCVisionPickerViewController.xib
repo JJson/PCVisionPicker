@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PCVisionPickerViewController" customModule="PCVisionPicker" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomConstraint" destination="fw3-4s-aQy" id="oQA-7Z-mxs"/>
+                <outlet property="btLight" destination="uyD-5M-VUe" id="acX-hN-3Al"/>
+                <outlet property="btStart" destination="VGT-u0-JKs" id="Vk7-tx-UQQ"/>
+                <outlet property="btSwitch" destination="W3G-63-vAe" id="huZ-hh-WRF"/>
+                <outlet property="lbTime" destination="g7h-GR-OsW" id="8Cj-Et-Mnh"/>
+                <outlet property="lbTimeTopConstraint" destination="ROt-uw-hDH" id="fhh-Vz-nfc"/>
+                <outlet property="previewTopConstraint" destination="U9q-wp-zzy" id="OlA-nS-onM"/>
+                <outlet property="previewView" destination="S0O-Hc-boP" id="omV-iS-h7u"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7h-GR-OsW">
+                    <rect key="frame" x="151" y="15" width="71.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0O-Hc-boP">
+                    <rect key="frame" x="0.0" y="51" width="375" height="536"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Ump-km-yGO" appends="YES" id="iwD-Qy-6VO"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLD-ts-hjj">
+                    <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SCP-ex-zrQ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="9a5-ay-0VF"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyD-5M-VUe">
+                            <rect key="frame" x="25" y="20" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Fvv-Wr-iVr"/>
+                                <constraint firstAttribute="width" constant="40" id="NRp-kZ-Hrm"/>
+                            </constraints>
+                            <state key="normal" image="light_auto"/>
+                            <connections>
+                                <action selector="switchFlashModeAction:" destination="-1" eventType="touchUpInside" id="Drq-7H-Qi4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGT-u0-JKs">
+                            <rect key="frame" x="157" y="10" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="480-Mj-CB7"/>
+                                <constraint firstAttribute="height" constant="60" id="MyX-Ez-IUR"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="pcvision_start"/>
+                            <connections>
+                                <action selector="startAction:" destination="-1" eventType="touchUpInside" id="tb5-fP-EYi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3G-63-vAe">
+                            <rect key="frame" x="310" y="20" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Nwb-4V-Rad"/>
+                                <constraint firstAttribute="height" constant="40" id="zb5-yz-CfX"/>
+                            </constraints>
+                            <state key="normal" image="switch_camera"/>
+                            <connections>
+                                <action selector="switchCameraAction:" destination="-1" eventType="touchUpInside" id="1H7-Yq-71Z"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="VGT-u0-JKs" firstAttribute="centerY" secondItem="RLD-ts-hjj" secondAttribute="centerY" id="4NM-KV-5ss"/>
+                        <constraint firstItem="SCP-ex-zrQ" firstAttribute="leading" secondItem="RLD-ts-hjj" secondAttribute="leading" id="AQJ-7R-Tg9"/>
+                        <constraint firstItem="W3G-63-vAe" firstAttribute="centerY" secondItem="RLD-ts-hjj" secondAttribute="centerY" id="B1Z-Pt-uQZ"/>
+                        <constraint firstAttribute="trailing" secondItem="W3G-63-vAe" secondAttribute="trailing" constant="25" id="HYL-G7-Ig2"/>
+                        <constraint firstAttribute="trailing" secondItem="SCP-ex-zrQ" secondAttribute="trailing" id="KPp-uR-6k4"/>
+                        <constraint firstAttribute="trailing" secondItem="W3G-63-vAe" secondAttribute="trailing" constant="25" id="NmP-uz-Gzo"/>
+                        <constraint firstItem="uyD-5M-VUe" firstAttribute="leading" secondItem="RLD-ts-hjj" secondAttribute="leading" constant="25" id="Q00-Em-UOl"/>
+                        <constraint firstItem="W3G-63-vAe" firstAttribute="centerY" secondItem="RLD-ts-hjj" secondAttribute="centerY" id="Q0d-c2-e2Y"/>
+                        <constraint firstItem="uyD-5M-VUe" firstAttribute="centerY" secondItem="RLD-ts-hjj" secondAttribute="centerY" id="WW7-3I-RIL"/>
+                        <constraint firstAttribute="bottom" secondItem="SCP-ex-zrQ" secondAttribute="bottom" id="aI8-m2-ICU"/>
+                        <constraint firstItem="SCP-ex-zrQ" firstAttribute="top" secondItem="RLD-ts-hjj" secondAttribute="top" id="fwZ-ef-zAe"/>
+                        <constraint firstAttribute="height" constant="80" id="jr4-Xu-0eZ"/>
+                        <constraint firstItem="VGT-u0-JKs" firstAttribute="centerX" secondItem="RLD-ts-hjj" secondAttribute="centerX" id="jzc-QJ-c5D"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dg-kO-Klr">
+                    <rect key="frame" x="309" y="3" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="Urh-Dz-krK"/>
+                        <constraint firstAttribute="width" constant="46" id="fUR-OS-Kz9"/>
+                    </constraints>
+                    <state key="normal" image="pcvision_cancel"/>
+                    <connections>
+                        <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="PcM-Rm-q4B"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="2dg-kO-Klr" firstAttribute="centerY" secondItem="g7h-GR-OsW" secondAttribute="centerY" id="9Vc-oj-5RS"/>
+                <constraint firstAttribute="trailing" secondItem="2dg-kO-Klr" secondAttribute="trailing" constant="20" id="MhQ-rk-NdL"/>
+                <constraint firstItem="RLD-ts-hjj" firstAttribute="top" secondItem="S0O-Hc-boP" secondAttribute="bottom" id="O0A-cB-Bbf"/>
+                <constraint firstItem="g7h-GR-OsW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="ROt-uw-hDH"/>
+                <constraint firstAttribute="trailing" secondItem="RLD-ts-hjj" secondAttribute="trailing" id="RkJ-hZ-km6"/>
+                <constraint firstItem="S0O-Hc-boP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="51" id="U9q-wp-zzy"/>
+                <constraint firstItem="S0O-Hc-boP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ffZ-tR-EF6"/>
+                <constraint firstAttribute="bottom" secondItem="RLD-ts-hjj" secondAttribute="bottom" id="fw3-4s-aQy"/>
+                <constraint firstItem="g7h-GR-OsW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gOl-22-J3h"/>
+                <constraint firstAttribute="trailing" secondItem="S0O-Hc-boP" secondAttribute="trailing" id="nYg-Qd-Amo"/>
+                <constraint firstItem="RLD-ts-hjj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="v9t-gJ-Dgq"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+        <tapGestureRecognizer id="Ump-km-yGO">
+            <connections>
+                <action selector="handleFocusTapGesterRecognizerWithGestureRecognizer:" destination="-1" id="WPp-tZ-l3w"/>
+                <outlet property="delegate" destination="-1" id="p42-Vl-223"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="light_auto" width="21" height="21"/>
+        <image name="pcvision_cancel" width="21" height="21"/>
+        <image name="pcvision_start" width="66" height="66"/>
+        <image name="switch_camera" width="21" height="21"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_PCVisionPicker_Example {
+  umbrella header "Pods-PCVisionPicker_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

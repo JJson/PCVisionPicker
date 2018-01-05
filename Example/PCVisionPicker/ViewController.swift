@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import PCVisionPicker
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -20,5 +20,24 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func buttonAction(_ sender: Any) {
+        let ctr = PCVisionPickerViewController(nibName: "PCVisionPickerViewController", bundle: nil)
+        ctr.cameraMode = .video
+        ctr.handleDone = {image,videoUrl in
+            if image != nil {
+                let path = NSHomeDirectory() + "/Documents/image.jpg"
+                let imageData = UIImageJPEGRepresentation(image!, 0.5)
+                try? imageData?.write(to: URL(fileURLWithPath: path))
+            }
+            if videoUrl != nil {
+                let path = NSHomeDirectory() + "/Documents/video.mp4"
+                try? FileManager.default.moveItem(at: videoUrl!, to: URL(fileURLWithPath: path))
+            }
+        }
+        let navCtr = UINavigationController(rootViewController: ctr)
+        present(navCtr, animated: true) {
+            
+        }
+    }
 }
 

@@ -31,12 +31,12 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'PCVisionPicker/Classes/**/*'
-  
+  s.resources = "PCVisionPicker/Classes/Resource/*.xib", "PCVisionPicker/Assets/PCVisionImages.xcassets"
   # s.resource_bundles = {
   #   'PCVisionPicker' => ['PCVisionPicker/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'PBJVision', '~> 0.5.2.JJSon'
 end

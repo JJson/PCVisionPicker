@@ -1,0 +1,1030 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1064C5A22D0F60B2A016FFC136007E11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D806AE78DF02BEEAECF3B3B9309FAEF1 /* Foundation.framework */; };
+		114B5B0C5F5CAB665CA008D57A85E71D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7853FDB73AE07AF431B9B7CBB2289D /* CoreMedia.framework */; };
+		1267017A8B52829E637CC0C188197C5F /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = E2F454F4C5D1D605B011E4FE6188285A /* Shader.fsh */; };
+		1622EF49BF120581BCFA677617B85387 /* PBJVision-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B6BCCBA7EBCA5772D9C366F172EAACC /* PBJVision-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16736730E8C25473C7FB6D8DBDC8C215 /* PBJGLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DDE6CAB7584D88BC8DBE7B1AC1B3E1E /* PBJGLProgram.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		227C465FDBE01260084B5F0778551525 /* PCVisionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517E5020E3132F9D221EE626F4F2C69A /* PCVisionPickerViewController.swift */; };
+		2FAC8BAA7D419118F5015C2599F914E1 /* Pods-PCVisionPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D915D7F7267AF997F8131177742E6A /* Pods-PCVisionPicker_Example-dummy.m */; };
+		2FD6E49D125610211B6B1ED38D40FB90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D806AE78DF02BEEAECF3B3B9309FAEF1 /* Foundation.framework */; };
+		434ED00718F722F3C933F56745231C4E /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 13EA931D3D1EE7A800E90632D7CDDB95 /* Shader.vsh */; };
+		4CE8B8BDD63BCA9DC84FAC6FEB4AB2DE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F158C91BEE4465F2E0BBD068280BD47C /* QuartzCore.framework */; };
+		53D6DB9D8431945939F043CC1003F1F6 /* PCVisionPickerPreviewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = B479A5B8794FE61B41F577C41EE59D18 /* PCVisionPickerPreviewController.xib */; };
+		556D5F1465A783E3F2F0C60A6FBEDCAC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F06EDEE3C4AFAD7F919BBA23789EE60 /* CoreGraphics.framework */; };
+		63772DB3A82A5021C6A7216FAC174A42 /* PBJGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CF1BE1284AC465B9743C273A39EAD9 /* PBJGLProgram.m */; };
+		6B6245790800D676282AA63333EFFC2E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A985A238E223F38BDA9F16DC5206BCD5 /* ImageIO.framework */; };
+		6EBD634C28BD68812163EA26E25928F4 /* PBJVisionUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 99D42E68B63E465CFF111F62DDD48700 /* PBJVisionUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		779B65F53C56187964C5C846B70CFCCA /* PBJVisionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C87E2471D8C48F93B1C45DA5F78AEA /* PBJVisionUtilities.m */; };
+		7DEF79CC9CB983B3982C675387A645F4 /* PCVisionImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D84D21A4EF6CD551E682DC7F6FFE549 /* PCVisionImages.xcassets */; };
+		818218950B001C64F320F05409BFE163 /* PCVisionPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AAE7C3C4D73674EF0C9F9E8E8A916BB /* PCVisionPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8247E3AE9A30779546331FAB4BE2ED35 /* Pods-PCVisionPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E58582DDB4A8515811F87E68156D4861 /* Pods-PCVisionPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		888B2A048F5ED4F2C052E4C9B061A897 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B34ABF54E5B4E4FA43B83A86616A4F3 /* CoreImage.framework */; };
+		8AE51D1556CE2D9FC5746F21BF1FAF58 /* PCVisionPickerPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8DECEC342271ACFD216546D214D2EB /* PCVisionPickerPreviewController.swift */; };
+		8AF148CF99EB58B629F57F60F023EA1E /* PBJVision.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D79E58C1C760CD9CE43A5EAB63C3E8F /* PBJVision.m */; };
+		8B39E029FF80FE9E3DAAF1AAF347B475 /* PCVisionPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A12A2AD9FB78682EDF8419F170B9B40A /* PCVisionPicker-dummy.m */; };
+		8C012EB3BCB3C747EC73F79070BA0A05 /* PCVisionPickerViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 297452AA8885284CA4BC9920A0CF750A /* PCVisionPickerViewController.xib */; };
+		8DC2EB3446DEDFF8CEFB3D2DE3CD43B3 /* PBJFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62040C36D2AAE5096345BD6CE08A56C5 /* PBJFocusView.swift */; };
+		962B741DAC91F4EFA698F08A078E606E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D22A5763B51DD4332250DB919F4379DB /* CoreVideo.framework */; };
+		A7AD80565DC44E5F1A3B2871DA59BBFD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C942A6ED880F8EC43F40317026136A2 /* MobileCoreServices.framework */; };
+		AD18642BA0E9C4599ABB35D54B06E64E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D806AE78DF02BEEAECF3B3B9309FAEF1 /* Foundation.framework */; };
+		AFA646409CD0A7319D0F0EB5757A4095 /* PBJMediaWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 315A80F4023C18AF6314A1D9058703DF /* PBJMediaWriter.m */; };
+		C2FC3316FBB7C9C07AC3FCB9DC5FE8B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB92A7A7ACAEC826F0EC2B214E7C81F /* UIKit.framework */; };
+		D334B41ACFADAED018BBF12F733080AE /* PBJVision.h in Headers */ = {isa = PBXBuildFile; fileRef = 23A261E98ED8671D0AF83096E4DE1142 /* PBJVision.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5F5F79C5324885C4A75A770E41BA3C5 /* Pods-PCVisionPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FAA0DA48E13E1603650EC1DE84A714 /* Pods-PCVisionPicker-dummy.m */; };
+		D61F71762D9EC0DA70B511A5F390A47F /* Pods-PCVisionPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06743A969F2E2F7CCC711B3754A19C69 /* Pods-PCVisionPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD3CE13CF8E7E1BADBD302E308174083 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A895A327372304EED5D3D55BEE44C574 /* AVFoundation.framework */; };
+		DD3F8508CCFBF88B4E336D66F60AB8BC /* PBJVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6BCF8B9D3004ED363EF248D78A7A77 /* PBJVision.framework */; };
+		EBF3E632E29DDFC9E97B76392624566D /* PBJVision-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 858B6A15DD0111F9B28F7D1EAB91420E /* PBJVision-dummy.m */; };
+		F5D244C0F5F03C97D9C3FC6EE4CB3991 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D806AE78DF02BEEAECF3B3B9309FAEF1 /* Foundation.framework */; };
+		F79A4408BDE33244F06866D03B4CCB99 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26081FB7CAF4E6FF3A05653FBDD973E /* OpenGLES.framework */; };
+		F7D2C17DECEBCDFC2CB0D5FD11E8ECE2 /* PBJMediaWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = DD53FC7CB60F73A3AEC2965EF696A56B /* PBJMediaWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B015149AB0D57A7A117BD7C65428C45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 182B16A0E5CB792CBDE2A11FDE7F6622;
+			remoteInfo = PCVisionPicker;
+		};
+		9B840B620A2D97610856DD78FFB77006 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0249F1CCD6CA272BB3BF7B840F509A3D;
+			remoteInfo = PBJVision;
+		};
+		F4871A7D655030797E9096CC0CB20EE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0249F1CCD6CA272BB3BF7B840F509A3D;
+			remoteInfo = PBJVision;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02C87E2471D8C48F93B1C45DA5F78AEA /* PBJVisionUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVisionUtilities.m; path = Source/PBJVisionUtilities.m; sourceTree = "<group>"; };
+		06743A969F2E2F7CCC711B3754A19C69 /* Pods-PCVisionPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PCVisionPicker_Example-umbrella.h"; sourceTree = "<group>"; };
+		13EA931D3D1EE7A800E90632D7CDDB95 /* Shader.vsh */ = {isa = PBXFileReference; includeInIndex = 1; name = Shader.vsh; path = Source/Shaders/Shader.vsh; sourceTree = "<group>"; };
+		16D915D7F7267AF997F8131177742E6A /* Pods-PCVisionPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PCVisionPicker_Example-dummy.m"; sourceTree = "<group>"; };
+		1B93C18C08176E8CE8B0509D8F165D4C /* Pods-PCVisionPicker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PCVisionPicker_Example-resources.sh"; sourceTree = "<group>"; };
+		1BA75085083EAA5AA7AF4EFCF78EA467 /* Pods-PCVisionPicker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PCVisionPicker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1F7853FDB73AE07AF431B9B7CBB2289D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		1FAC110391BDB35FE17C38C64F682403 /* Pods-PCVisionPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PCVisionPicker_Example.modulemap"; sourceTree = "<group>"; };
+		230DC748C0B2E90BF4C84C4237AB15F2 /* PCVisionPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PCVisionPicker.modulemap; sourceTree = "<group>"; };
+		23A261E98ED8671D0AF83096E4DE1142 /* PBJVision.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVision.h; path = Source/PBJVision.h; sourceTree = "<group>"; };
+		297452AA8885284CA4BC9920A0CF750A /* PCVisionPickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PCVisionPickerViewController.xib; path = PCVisionPicker/Classes/Source/PCVisionPickerViewController.xib; sourceTree = "<group>"; };
+		2B6BCCBA7EBCA5772D9C366F172EAACC /* PBJVision-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVision-umbrella.h"; sourceTree = "<group>"; };
+		315A80F4023C18AF6314A1D9058703DF /* PBJMediaWriter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJMediaWriter.m; path = Source/PBJMediaWriter.m; sourceTree = "<group>"; };
+		320177035C6F13B268EE08FBD630FFE6 /* Pods-PCVisionPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PCVisionPicker.debug.xcconfig"; sourceTree = "<group>"; };
+		336BC5A6D1C51F092705CADCD47C92F3 /* PBJVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PBJVision.framework; path = PBJVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3599387E51387B284ECE3D5821703443 /* Pods-PCVisionPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PCVisionPicker.modulemap"; sourceTree = "<group>"; };
+		373DE0B3AEBC25573F9B1538652B3C7C /* Pods-PCVisionPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PCVisionPicker.release.xcconfig"; sourceTree = "<group>"; };
+		48E5E611378D008F808DA7C2151088CF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B42C888FCE4F2D92CF8E07AFA66E2FE /* Pods-PCVisionPicker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PCVisionPicker-resources.sh"; sourceTree = "<group>"; };
+		4C942A6ED880F8EC43F40317026136A2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		517E5020E3132F9D221EE626F4F2C69A /* PCVisionPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCVisionPickerViewController.swift; path = PCVisionPicker/Classes/Source/PCVisionPickerViewController.swift; sourceTree = "<group>"; };
+		53292A8FEB7B62A5AB46E7BFB55B32C1 /* PBJVision-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVision-prefix.pch"; sourceTree = "<group>"; };
+		539B66B81780BC7F0460ABF120A8FE67 /* Pods-PCVisionPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PCVisionPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		5D84D21A4EF6CD551E682DC7F6FFE549 /* PCVisionImages.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = PCVisionImages.xcassets; path = PCVisionPicker/Assets/PCVisionImages.xcassets; sourceTree = "<group>"; };
+		5F06EDEE3C4AFAD7F919BBA23789EE60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		62040C36D2AAE5096345BD6CE08A56C5 /* PBJFocusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBJFocusView.swift; path = PCVisionPicker/Classes/Source/PBJFocusView.swift; sourceTree = "<group>"; };
+		6845C0B47B8C76A5EFFFFA8E07C127DF /* PCVisionPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PCVisionPicker-prefix.pch"; sourceTree = "<group>"; };
+		6DDE6CAB7584D88BC8DBE7B1AC1B3E1E /* PBJGLProgram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJGLProgram.h; path = Source/PBJGLProgram.h; sourceTree = "<group>"; };
+		789DD9ABB1DB1018CFDAB91249EFB77E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A328FF60848F8DAE9EA2A11E910CBDA /* Pods-PCVisionPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PCVisionPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
+		7AAE7C3C4D73674EF0C9F9E8E8A916BB /* PCVisionPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PCVisionPicker-umbrella.h"; sourceTree = "<group>"; };
+		7BC49998BB052E158EEF6ACF0C0F7353 /* PCVisionPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PCVisionPicker.xcconfig; sourceTree = "<group>"; };
+		7D79E58C1C760CD9CE43A5EAB63C3E8F /* PBJVision.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVision.m; path = Source/PBJVision.m; sourceTree = "<group>"; };
+		7E6BCF8B9D3004ED363EF248D78A7A77 /* PBJVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PBJVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858B6A15DD0111F9B28F7D1EAB91420E /* PBJVision-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PBJVision-dummy.m"; sourceTree = "<group>"; };
+		90FAA0DA48E13E1603650EC1DE84A714 /* Pods-PCVisionPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PCVisionPicker-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99D42E68B63E465CFF111F62DDD48700 /* PBJVisionUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVisionUtilities.h; path = Source/PBJVisionUtilities.h; sourceTree = "<group>"; };
+		9AF8EA5F0644A0B92CD4D7BBEFAC844B /* Pods-PCVisionPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PCVisionPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		9B34ABF54E5B4E4FA43B83A86616A4F3 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		9EB92A7A7ACAEC826F0EC2B214E7C81F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A12A2AD9FB78682EDF8419F170B9B40A /* PCVisionPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PCVisionPicker-dummy.m"; sourceTree = "<group>"; };
+		A895A327372304EED5D3D55BEE44C574 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		A985A238E223F38BDA9F16DC5206BCD5 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		B2A28F77A762E594D9BE79A6B5E0B358 /* PCVisionPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PCVisionPicker.framework; path = PCVisionPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2FCCF00BF23DCFD193D62BD1C1EF0A3 /* PBJVision.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PBJVision.xcconfig; sourceTree = "<group>"; };
+		B479A5B8794FE61B41F577C41EE59D18 /* PCVisionPickerPreviewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PCVisionPickerPreviewController.xib; path = PCVisionPicker/Classes/Source/PCVisionPickerPreviewController.xib; sourceTree = "<group>"; };
+		B5FCAE959C3C9170A32C9B3255B49F56 /* Pods_PCVisionPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PCVisionPicker_Example.framework; path = "Pods-PCVisionPicker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6655715D1403F6905964A8656CC7A29 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB8DECEC342271ACFD216546D214D2EB /* PCVisionPickerPreviewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCVisionPickerPreviewController.swift; path = PCVisionPicker/Classes/Source/PCVisionPickerPreviewController.swift; sourceTree = "<group>"; };
+		BE05E3BCD038DDF3901A03CB25E67FBE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C60D4420CA5F75480767E1218319E64F /* Pods_PCVisionPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PCVisionPicker.framework; path = "Pods-PCVisionPicker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7CF1BE1284AC465B9743C273A39EAD9 /* PBJGLProgram.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJGLProgram.m; path = Source/PBJGLProgram.m; sourceTree = "<group>"; };
+		D22A5763B51DD4332250DB919F4379DB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		D641EE60F93F2F78867FDAA5639A8177 /* Pods-PCVisionPicker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PCVisionPicker-acknowledgements.plist"; sourceTree = "<group>"; };
+		D806AE78DF02BEEAECF3B3B9309FAEF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DD53FC7CB60F73A3AEC2965EF696A56B /* PBJMediaWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJMediaWriter.h; path = Source/PBJMediaWriter.h; sourceTree = "<group>"; };
+		DDAC43CD40DA74ACBA212AAEE82D9C01 /* Pods-PCVisionPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PCVisionPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E26081FB7CAF4E6FF3A05653FBDD973E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		E2F454F4C5D1D605B011E4FE6188285A /* Shader.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = Shader.fsh; path = Source/Shaders/Shader.fsh; sourceTree = "<group>"; };
+		E58582DDB4A8515811F87E68156D4861 /* Pods-PCVisionPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PCVisionPicker-umbrella.h"; sourceTree = "<group>"; };
+		E8B9655AEB934263AA2D08146860A167 /* PBJVision.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PBJVision.modulemap; sourceTree = "<group>"; };
+		F158C91BEE4465F2E0BBD068280BD47C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		FCC82D3D8CACF039E827EA546AA5F497 /* Pods-PCVisionPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PCVisionPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F024825635EB8683EBB191390CB9299 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1064C5A22D0F60B2A016FFC136007E11 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6EDA01C6DCD23A319BC1FCAB0500DA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD18642BA0E9C4599ABB35D54B06E64E /* Foundation.framework in Frameworks */,
+				DD3F8508CCFBF88B4E336D66F60AB8BC /* PBJVision.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB84BA866F9C70D5D49FBE2F5C9FCB99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D244C0F5F03C97D9C3FC6EE4CB3991 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B5E30CFF75441E296B4A5FC6D546AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD3CE13CF8E7E1BADBD302E308174083 /* AVFoundation.framework in Frameworks */,
+				556D5F1465A783E3F2F0C60A6FBEDCAC /* CoreGraphics.framework in Frameworks */,
+				888B2A048F5ED4F2C052E4C9B061A897 /* CoreImage.framework in Frameworks */,
+				114B5B0C5F5CAB665CA008D57A85E71D /* CoreMedia.framework in Frameworks */,
+				962B741DAC91F4EFA698F08A078E606E /* CoreVideo.framework in Frameworks */,
+				2FD6E49D125610211B6B1ED38D40FB90 /* Foundation.framework in Frameworks */,
+				6B6245790800D676282AA63333EFFC2E /* ImageIO.framework in Frameworks */,
+				A7AD80565DC44E5F1A3B2871DA59BBFD /* MobileCoreServices.framework in Frameworks */,
+				F79A4408BDE33244F06866D03B4CCB99 /* OpenGLES.framework in Frameworks */,
+				4CE8B8BDD63BCA9DC84FAC6FEB4AB2DE /* QuartzCore.framework in Frameworks */,
+				C2FC3316FBB7C9C07AC3FCB9DC5FE8B1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12805A68C101D65297FB01075F29CC5B /* PBJVision */ = {
+			isa = PBXGroup;
+			children = (
+				6DDE6CAB7584D88BC8DBE7B1AC1B3E1E /* PBJGLProgram.h */,
+				C7CF1BE1284AC465B9743C273A39EAD9 /* PBJGLProgram.m */,
+				DD53FC7CB60F73A3AEC2965EF696A56B /* PBJMediaWriter.h */,
+				315A80F4023C18AF6314A1D9058703DF /* PBJMediaWriter.m */,
+				23A261E98ED8671D0AF83096E4DE1142 /* PBJVision.h */,
+				7D79E58C1C760CD9CE43A5EAB63C3E8F /* PBJVision.m */,
+				99D42E68B63E465CFF111F62DDD48700 /* PBJVisionUtilities.h */,
+				02C87E2471D8C48F93B1C45DA5F78AEA /* PBJVisionUtilities.m */,
+				51F2F078B87A0F79232B4774523CBCF2 /* Resources */,
+				50F325E37E82B81CEC559D3CC44CB5B7 /* Support Files */,
+			);
+			name = PBJVision;
+			path = PBJVision;
+			sourceTree = "<group>";
+		};
+		26AB9C304272105C8F3CCD6B79C04873 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A895A327372304EED5D3D55BEE44C574 /* AVFoundation.framework */,
+				5F06EDEE3C4AFAD7F919BBA23789EE60 /* CoreGraphics.framework */,
+				9B34ABF54E5B4E4FA43B83A86616A4F3 /* CoreImage.framework */,
+				1F7853FDB73AE07AF431B9B7CBB2289D /* CoreMedia.framework */,
+				D22A5763B51DD4332250DB919F4379DB /* CoreVideo.framework */,
+				D806AE78DF02BEEAECF3B3B9309FAEF1 /* Foundation.framework */,
+				A985A238E223F38BDA9F16DC5206BCD5 /* ImageIO.framework */,
+				4C942A6ED880F8EC43F40317026136A2 /* MobileCoreServices.framework */,
+				E26081FB7CAF4E6FF3A05653FBDD973E /* OpenGLES.framework */,
+				F158C91BEE4465F2E0BBD068280BD47C /* QuartzCore.framework */,
+				9EB92A7A7ACAEC826F0EC2B214E7C81F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		2E4D023113C96232D79C952D3956BE01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12805A68C101D65297FB01075F29CC5B /* PBJVision */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		39939A001A26AA27504DC0F1723C4CC9 /* PCVisionPicker */ = {
+			isa = PBXGroup;
+			children = (
+				62040C36D2AAE5096345BD6CE08A56C5 /* PBJFocusView.swift */,
+				BB8DECEC342271ACFD216546D214D2EB /* PCVisionPickerPreviewController.swift */,
+				B479A5B8794FE61B41F577C41EE59D18 /* PCVisionPickerPreviewController.xib */,
+				517E5020E3132F9D221EE626F4F2C69A /* PCVisionPickerViewController.swift */,
+				297452AA8885284CA4BC9920A0CF750A /* PCVisionPickerViewController.xib */,
+				9755B1B76D591A3AE63B90512888FC1A /* Resources */,
+				8782E1B04E54E60D6B30F64DFEDA2AAC /* Support Files */,
+			);
+			name = PCVisionPicker;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		50F325E37E82B81CEC559D3CC44CB5B7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE05E3BCD038DDF3901A03CB25E67FBE /* Info.plist */,
+				E8B9655AEB934263AA2D08146860A167 /* PBJVision.modulemap */,
+				B2FCCF00BF23DCFD193D62BD1C1EF0A3 /* PBJVision.xcconfig */,
+				858B6A15DD0111F9B28F7D1EAB91420E /* PBJVision-dummy.m */,
+				53292A8FEB7B62A5AB46E7BFB55B32C1 /* PBJVision-prefix.pch */,
+				2B6BCCBA7EBCA5772D9C366F172EAACC /* PBJVision-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PBJVision";
+			sourceTree = "<group>";
+		};
+		51F2F078B87A0F79232B4774523CBCF2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2F454F4C5D1D605B011E4FE6188285A /* Shader.fsh */,
+				13EA931D3D1EE7A800E90632D7CDDB95 /* Shader.vsh */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		584954E077CD630C9573150A8921DF8E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0F5D366C402E33A3696CB581B81EF03 /* Pods-PCVisionPicker */,
+				D52778CF1138835E95E4EA044C1383A5 /* Pods-PCVisionPicker_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6A94EC6699720D31C09C4D574BC2FE3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E6BCF8B9D3004ED363EF248D78A7A77 /* PBJVision.framework */,
+				26AB9C304272105C8F3CCD6B79C04873 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DDF1E0AC587240C3A46C6E7BBC973FF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39939A001A26AA27504DC0F1723C4CC9 /* PCVisionPicker */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				6DDF1E0AC587240C3A46C6E7BBC973FF /* Development Pods */,
+				6A94EC6699720D31C09C4D574BC2FE3D /* Frameworks */,
+				2E4D023113C96232D79C952D3956BE01 /* Pods */,
+				EF2AD6F1156B54621AEABD5C7084A295 /* Products */,
+				584954E077CD630C9573150A8921DF8E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8782E1B04E54E60D6B30F64DFEDA2AAC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6655715D1403F6905964A8656CC7A29 /* Info.plist */,
+				230DC748C0B2E90BF4C84C4237AB15F2 /* PCVisionPicker.modulemap */,
+				7BC49998BB052E158EEF6ACF0C0F7353 /* PCVisionPicker.xcconfig */,
+				A12A2AD9FB78682EDF8419F170B9B40A /* PCVisionPicker-dummy.m */,
+				6845C0B47B8C76A5EFFFFA8E07C127DF /* PCVisionPicker-prefix.pch */,
+				7AAE7C3C4D73674EF0C9F9E8E8A916BB /* PCVisionPicker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PCVisionPicker";
+			sourceTree = "<group>";
+		};
+		9755B1B76D591A3AE63B90512888FC1A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D84D21A4EF6CD551E682DC7F6FFE549 /* PCVisionImages.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A0F5D366C402E33A3696CB581B81EF03 /* Pods-PCVisionPicker */ = {
+			isa = PBXGroup;
+			children = (
+				789DD9ABB1DB1018CFDAB91249EFB77E /* Info.plist */,
+				3599387E51387B284ECE3D5821703443 /* Pods-PCVisionPicker.modulemap */,
+				1BA75085083EAA5AA7AF4EFCF78EA467 /* Pods-PCVisionPicker-acknowledgements.markdown */,
+				D641EE60F93F2F78867FDAA5639A8177 /* Pods-PCVisionPicker-acknowledgements.plist */,
+				90FAA0DA48E13E1603650EC1DE84A714 /* Pods-PCVisionPicker-dummy.m */,
+				4B42C888FCE4F2D92CF8E07AFA66E2FE /* Pods-PCVisionPicker-resources.sh */,
+				E58582DDB4A8515811F87E68156D4861 /* Pods-PCVisionPicker-umbrella.h */,
+				320177035C6F13B268EE08FBD630FFE6 /* Pods-PCVisionPicker.debug.xcconfig */,
+				373DE0B3AEBC25573F9B1538652B3C7C /* Pods-PCVisionPicker.release.xcconfig */,
+			);
+			name = "Pods-PCVisionPicker";
+			path = "Target Support Files/Pods-PCVisionPicker";
+			sourceTree = "<group>";
+		};
+		D52778CF1138835E95E4EA044C1383A5 /* Pods-PCVisionPicker_Example */ = {
+			isa = PBXGroup;
+			children = (
+				48E5E611378D008F808DA7C2151088CF /* Info.plist */,
+				1FAC110391BDB35FE17C38C64F682403 /* Pods-PCVisionPicker_Example.modulemap */,
+				DDAC43CD40DA74ACBA212AAEE82D9C01 /* Pods-PCVisionPicker_Example-acknowledgements.markdown */,
+				9AF8EA5F0644A0B92CD4D7BBEFAC844B /* Pods-PCVisionPicker_Example-acknowledgements.plist */,
+				16D915D7F7267AF997F8131177742E6A /* Pods-PCVisionPicker_Example-dummy.m */,
+				7A328FF60848F8DAE9EA2A11E910CBDA /* Pods-PCVisionPicker_Example-frameworks.sh */,
+				1B93C18C08176E8CE8B0509D8F165D4C /* Pods-PCVisionPicker_Example-resources.sh */,
+				06743A969F2E2F7CCC711B3754A19C69 /* Pods-PCVisionPicker_Example-umbrella.h */,
+				539B66B81780BC7F0460ABF120A8FE67 /* Pods-PCVisionPicker_Example.debug.xcconfig */,
+				FCC82D3D8CACF039E827EA546AA5F497 /* Pods-PCVisionPicker_Example.release.xcconfig */,
+			);
+			name = "Pods-PCVisionPicker_Example";
+			path = "Target Support Files/Pods-PCVisionPicker_Example";
+			sourceTree = "<group>";
+		};
+		EF2AD6F1156B54621AEABD5C7084A295 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				336BC5A6D1C51F092705CADCD47C92F3 /* PBJVision.framework */,
+				B2A28F77A762E594D9BE79A6B5E0B358 /* PCVisionPicker.framework */,
+				C60D4420CA5F75480767E1218319E64F /* Pods_PCVisionPicker.framework */,
+				B5FCAE959C3C9170A32C9B3255B49F56 /* Pods_PCVisionPicker_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29337DA78B98219BA5F545A22B792A75 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16736730E8C25473C7FB6D8DBDC8C215 /* PBJGLProgram.h in Headers */,
+				F7D2C17DECEBCDFC2CB0D5FD11E8ECE2 /* PBJMediaWriter.h in Headers */,
+				1622EF49BF120581BCFA677617B85387 /* PBJVision-umbrella.h in Headers */,
+				D334B41ACFADAED018BBF12F733080AE /* PBJVision.h in Headers */,
+				6EBD634C28BD68812163EA26E25928F4 /* PBJVisionUtilities.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3541E40D3C0B994E408AA1971BC7FDCE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D61F71762D9EC0DA70B511A5F390A47F /* Pods-PCVisionPicker_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D99437EC5052B3E6154AB9DE0B850DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818218950B001C64F320F05409BFE163 /* PCVisionPicker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7EE215EA26D5075CB3E9A62DDD862F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8247E3AE9A30779546331FAB4BE2ED35 /* Pods-PCVisionPicker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0249F1CCD6CA272BB3BF7B840F509A3D /* PBJVision */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71275A45BDF0555F3122FA882AE3FAC7 /* Build configuration list for PBXNativeTarget "PBJVision" */;
+			buildPhases = (
+				737DAEA0DDEB848F4DA9B04C841699FF /* Sources */,
+				D4B5E30CFF75441E296B4A5FC6D546AF /* Frameworks */,
+				29337DA78B98219BA5F545A22B792A75 /* Headers */,
+				9E9BC298DA6CC1B42F7919C7F315A79C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PBJVision;
+			productName = PBJVision;
+			productReference = 336BC5A6D1C51F092705CADCD47C92F3 /* PBJVision.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1723062E9910240AF446369B2141ED49 /* Pods-PCVisionPicker_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B8B24735387282C2C23AC5B90FB1608 /* Build configuration list for PBXNativeTarget "Pods-PCVisionPicker_Example" */;
+			buildPhases = (
+				73166629A5A58448CD221AA8B19A06DD /* Sources */,
+				7F024825635EB8683EBB191390CB9299 /* Frameworks */,
+				3541E40D3C0B994E408AA1971BC7FDCE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6858E58625C9FD2C962C7B00A373A0EC /* PBXTargetDependency */,
+				7C6D081A2B99348B7819D7FA0FE3DABC /* PBXTargetDependency */,
+			);
+			name = "Pods-PCVisionPicker_Example";
+			productName = "Pods-PCVisionPicker_Example";
+			productReference = B5FCAE959C3C9170A32C9B3255B49F56 /* Pods_PCVisionPicker_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		182B16A0E5CB792CBDE2A11FDE7F6622 /* PCVisionPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B6278EC702B6118AE802B6085230133 /* Build configuration list for PBXNativeTarget "PCVisionPicker" */;
+			buildPhases = (
+				D609CD5B93B64ABCA51E1FD1407B711D /* Sources */,
+				B6EDA01C6DCD23A319BC1FCAB0500DA6 /* Frameworks */,
+				C8B4B47001F3D0E5824AC22F8F118B36 /* Resources */,
+				3D99437EC5052B3E6154AB9DE0B850DA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FD61040883A2305EFCCF2F51F76994C /* PBXTargetDependency */,
+			);
+			name = PCVisionPicker;
+			productName = PCVisionPicker;
+			productReference = B2A28F77A762E594D9BE79A6B5E0B358 /* PCVisionPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		442B99B027BA2380F69844C0724B48CF /* Pods-PCVisionPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5852B6D0D535897A83BCD862A2B2BE9D /* Build configuration list for PBXNativeTarget "Pods-PCVisionPicker" */;
+			buildPhases = (
+				A82E0F4AF835F174D6BA17B6BA4914D3 /* Sources */,
+				BB84BA866F9C70D5D49FBE2F5C9FCB99 /* Frameworks */,
+				B7EE215EA26D5075CB3E9A62DDD862F6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PCVisionPicker";
+			productName = "Pods-PCVisionPicker";
+			productReference = C60D4420CA5F75480767E1218319E64F /* Pods_PCVisionPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = EF2AD6F1156B54621AEABD5C7084A295 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0249F1CCD6CA272BB3BF7B840F509A3D /* PBJVision */,
+				182B16A0E5CB792CBDE2A11FDE7F6622 /* PCVisionPicker */,
+				442B99B027BA2380F69844C0724B48CF /* Pods-PCVisionPicker */,
+				1723062E9910240AF446369B2141ED49 /* Pods-PCVisionPicker_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E9BC298DA6CC1B42F7919C7F315A79C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1267017A8B52829E637CC0C188197C5F /* Shader.fsh in Resources */,
+				434ED00718F722F3C933F56745231C4E /* Shader.vsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8B4B47001F3D0E5824AC22F8F118B36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DEF79CC9CB983B3982C675387A645F4 /* PCVisionImages.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73166629A5A58448CD221AA8B19A06DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FAC8BAA7D419118F5015C2599F914E1 /* Pods-PCVisionPicker_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		737DAEA0DDEB848F4DA9B04C841699FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63772DB3A82A5021C6A7216FAC174A42 /* PBJGLProgram.m in Sources */,
+				AFA646409CD0A7319D0F0EB5757A4095 /* PBJMediaWriter.m in Sources */,
+				EBF3E632E29DDFC9E97B76392624566D /* PBJVision-dummy.m in Sources */,
+				8AF148CF99EB58B629F57F60F023EA1E /* PBJVision.m in Sources */,
+				779B65F53C56187964C5C846B70CFCCA /* PBJVisionUtilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A82E0F4AF835F174D6BA17B6BA4914D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5F5F79C5324885C4A75A770E41BA3C5 /* Pods-PCVisionPicker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D609CD5B93B64ABCA51E1FD1407B711D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EB3446DEDFF8CEFB3D2DE3CD43B3 /* PBJFocusView.swift in Sources */,
+				8B39E029FF80FE9E3DAAF1AAF347B475 /* PCVisionPicker-dummy.m in Sources */,
+				8AE51D1556CE2D9FC5746F21BF1FAF58 /* PCVisionPickerPreviewController.swift in Sources */,
+				53D6DB9D8431945939F043CC1003F1F6 /* PCVisionPickerPreviewController.xib in Sources */,
+				227C465FDBE01260084B5F0778551525 /* PCVisionPickerViewController.swift in Sources */,
+				8C012EB3BCB3C747EC73F79070BA0A05 /* PCVisionPickerViewController.xib in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FD61040883A2305EFCCF2F51F76994C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PBJVision;
+			target = 0249F1CCD6CA272BB3BF7B840F509A3D /* PBJVision */;
+			targetProxy = F4871A7D655030797E9096CC0CB20EE0 /* PBXContainerItemProxy */;
+		};
+		6858E58625C9FD2C962C7B00A373A0EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PBJVision;
+			target = 0249F1CCD6CA272BB3BF7B840F509A3D /* PBJVision */;
+			targetProxy = 9B840B620A2D97610856DD78FFB77006 /* PBXContainerItemProxy */;
+		};
+		7C6D081A2B99348B7819D7FA0FE3DABC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PCVisionPicker;
+			target = 182B16A0E5CB792CBDE2A11FDE7F6622 /* PCVisionPicker */;
+			targetProxy = 0B015149AB0D57A7A117BD7C65428C45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A88366574BAEBA36508A2DDFFA1BF0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BC49998BB052E158EEF6ACF0C0F7353 /* PCVisionPicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PCVisionPicker/PCVisionPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PCVisionPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PCVisionPicker/PCVisionPicker.modulemap";
+				PRODUCT_NAME = PCVisionPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2A8D34D9E5C334C726484AA2DFE40629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BC49998BB052E158EEF6ACF0C0F7353 /* PCVisionPicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PCVisionPicker/PCVisionPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PCVisionPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PCVisionPicker/PCVisionPicker.modulemap";
+				PRODUCT_NAME = PCVisionPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9BFB6ED11E71C4E417D130B736591707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2FCCF00BF23DCFD193D62BD1C1EF0A3 /* PBJVision.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PBJVision/PBJVision-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PBJVision/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PBJVision/PBJVision.modulemap";
+				PRODUCT_NAME = PBJVision;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A4296EEF62E9BAC7097DC4535FF652C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 320177035C6F13B268EE08FBD630FFE6 /* Pods-PCVisionPicker.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PCVisionPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PCVisionPicker/Pods-PCVisionPicker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PCVisionPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C195FBC15A266F1F5AB5D0B6CB4DF859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 373DE0B3AEBC25573F9B1538652B3C7C /* Pods-PCVisionPicker.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PCVisionPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PCVisionPicker/Pods-PCVisionPicker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PCVisionPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C7752573DB1EEB3013DF1D8F03D17866 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCC82D3D8CACF039E827EA546AA5F497 /* Pods-PCVisionPicker_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PCVisionPicker_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PCVisionPicker_Example/Pods-PCVisionPicker_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PCVisionPicker_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C81D253C9B6068CB6A0943C7B6A40C0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2FCCF00BF23DCFD193D62BD1C1EF0A3 /* PBJVision.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PBJVision/PBJVision-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PBJVision/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PBJVision/PBJVision.modulemap";
+				PRODUCT_NAME = PBJVision;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F9AB8F94ED264631D3CBC41F7716C519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539B66B81780BC7F0460ABF120A8FE67 /* Pods-PCVisionPicker_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PCVisionPicker_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PCVisionPicker_Example/Pods-PCVisionPicker_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PCVisionPicker_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */,
+				B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B8B24735387282C2C23AC5B90FB1608 /* Build configuration list for PBXNativeTarget "Pods-PCVisionPicker_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9AB8F94ED264631D3CBC41F7716C519 /* Debug */,
+				C7752573DB1EEB3013DF1D8F03D17866 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5852B6D0D535897A83BCD862A2B2BE9D /* Build configuration list for PBXNativeTarget "Pods-PCVisionPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4296EEF62E9BAC7097DC4535FF652C4 /* Debug */,
+				C195FBC15A266F1F5AB5D0B6CB4DF859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71275A45BDF0555F3122FA882AE3FAC7 /* Build configuration list for PBXNativeTarget "PBJVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C81D253C9B6068CB6A0943C7B6A40C0E /* Debug */,
+				9BFB6ED11E71C4E417D130B736591707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B6278EC702B6118AE802B6085230133 /* Build configuration list for PBXNativeTarget "PCVisionPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A8D34D9E5C334C726484AA2DFE40629 /* Debug */,
+				1A88366574BAEBA36508A2DDFFA1BF0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,11 +1,11 @@
 use_frameworks!
-
+platform :ios, '8.0'
+source 'https://github.com/JJson/PBJVision.git'
 target 'PCVisionPicker_Example' do
   pod 'PCVisionPicker', :path => '../'
 
-  target 'PCVisionPicker_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
+target 'PCVisionPicker' do
+#    pod 'PBJVision', :git => 'https://github.com/JJson/PBJVision.git'
+end
+

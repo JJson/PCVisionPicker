@@ -1,0 +1,31 @@
+{
+  "name": "PCVisionPicker",
+  "version": "0.1.0",
+  "summary": "A short description of PCVisionPicker.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/JJSon/PCVisionPicker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "JJSon": "515867115@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/JJSon/PCVisionPicker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PCVisionPicker/Classes/**/*",
+  "resources": [
+    "PCVisionPicker/Classes/Resource/*.xib",
+    "PCVisionPicker/Assets/PCVisionImages.xcassets"
+  ],
+  "dependencies": {
+    "PBJVision": [
+      "~> 0.5.2.JJSon"
+    ]
+  }
+}
