@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PCVisionPicker_Example' do
+  pod 'PCVisionPicker', :path => '../'
+
+  target 'PCVisionPicker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
