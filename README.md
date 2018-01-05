@@ -17,7 +17,8 @@ PCVisionPicker is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'PCVisionPicker'
+source 'https://github.com/JJson/PBJVision.git'
+pod 'PCVisionPicker', :git => 'https://github.com/JJson/PCVisionPicker.git'
 ```
 
 ## Author
