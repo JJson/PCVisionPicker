@@ -46,7 +46,11 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
     @IBOutlet weak var btLight: UIButton!
     @IBOutlet weak var btStart: UIButton!
     @IBOutlet weak var btSwitch: UIButton!
-    
+    public override var prefersStatusBarHidden: Bool {
+        get {
+            return true
+        }
+    }
     override public func viewDidLoad() {
         super.viewDidLoad()
         if cameraMode == .photo {

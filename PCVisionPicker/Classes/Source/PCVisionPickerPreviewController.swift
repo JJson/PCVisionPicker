@@ -14,6 +14,12 @@ public class PCVisionPickerPreviewController: UIViewController {
     var handleDone:((UIImage?,URL?)->(Void))?
     var playerCtr = AVPlayerViewController()
     
+    public override var prefersStatusBarHidden: Bool {
+        get {
+            return true
+        }
+    }
+    
     @IBOutlet weak var imageView: UIImageView!
     
     override public func viewDidLoad() {
