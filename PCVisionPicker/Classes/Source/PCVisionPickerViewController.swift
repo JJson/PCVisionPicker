@@ -248,11 +248,12 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
             return
         }
         let videoPath = videoInfo[PBJVisionVideoPathKey]
+        let thumbnail = videoInfo[PBJVisionVideoThumbnailKey] as! UIImage
         let ctr = PCVisionPickerPreviewController()
         ctr.videoUrl = URL(fileURLWithPath: videoPath as! String)
         ctr.handleDone = {[weak self] _,videoUrl in
             self?.dismiss(animated: true, completion: {
-                self?.handleDone?(nil,videoUrl)
+                self?.handleDone?(thumbnail,videoUrl)
             })
         }
         lbTime.text = "00:00:00"
