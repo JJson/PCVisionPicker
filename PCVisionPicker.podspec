@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PCVisionPicker'
-  s.version          = '0.1.0'
+  s.version          = '0.5.2.JJSon'
   s.summary          = 'A short description of PCVisionPicker.'
 
 # This description is used to generate tags and improve search results.
