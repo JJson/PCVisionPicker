@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PCVisionPickerPreviewController" customModule="PCVisionPicker" customModuleProvider="target">
             <connections>
                 <outlet property="imageView" destination="cue-zY-rCG" id="O4B-Ms-Fgk"/>
+                <outlet property="playerControllerContainer" destination="Gsj-jw-fld" id="lSa-6a-DYU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -54,17 +55,25 @@
                         <constraint firstAttribute="height" constant="55" id="jNS-tQ-sut"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gsj-jw-fld">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="612"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="MEr-QU-iR2" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="2d2-IJ-GR8"/>
                 <constraint firstItem="MEr-QU-iR2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2nc-te-J1B"/>
+                <constraint firstItem="Gsj-jw-fld" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7Ws-qZ-Stw"/>
                 <constraint firstItem="MEr-QU-iR2" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="8Ui-U2-tM7"/>
+                <constraint firstItem="Gsj-jw-fld" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EIa-OZ-nth"/>
+                <constraint firstAttribute="trailing" secondItem="Gsj-jw-fld" secondAttribute="trailing" id="FrK-i1-s5L"/>
                 <constraint firstAttribute="trailing" secondItem="cue-zY-rCG" secondAttribute="trailing" id="Kva-yA-DU1"/>
+                <constraint firstItem="MEr-QU-iR2" firstAttribute="top" secondItem="Gsj-jw-fld" secondAttribute="bottom" id="Mg0-a1-4H0"/>
                 <constraint firstItem="cue-zY-rCG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kIO-Ta-A57"/>
                 <constraint firstItem="MEr-QU-iR2" firstAttribute="top" secondItem="cue-zY-rCG" secondAttribute="bottom" id="lvt-zH-lRQ"/>
                 <constraint firstItem="cue-zY-rCG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qFa-c3-Dpx"/>
             </constraints>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>
     </objects>
 </document>

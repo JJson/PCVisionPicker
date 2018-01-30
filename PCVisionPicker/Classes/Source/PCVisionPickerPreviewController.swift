@@ -8,7 +8,9 @@
 
 import UIKit
 import AVKit
+
 public class PCVisionPickerPreviewController: UIViewController {
+    
     var videoUrl:URL?
     var image:UIImage?
     var handleDone:((UIImage?,URL?)->(Void))?
@@ -20,23 +22,26 @@ public class PCVisionPickerPreviewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var playerControllerContainer: UIView!
     @IBOutlet weak var imageView: UIImageView!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        
         if videoUrl != nil {
             playerCtr.showsPlaybackControls = true
             playerCtr.videoGravity = AVLayerVideoGravity.resizeAspect.rawValue
             let player = AVPlayer(url: videoUrl!)
             playerCtr.player = player
-            view.addSubview(playerCtr.view)
+            playerControllerContainer.addSubview(playerCtr.view)
+            playerCtr.view.autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin, .flexibleLeftMargin, .flexibleRightMargin, .flexibleHeight, .flexibleWidth]
         }
+        
         if image != nil {
             imageView.image = image
         }
-        // Do any additional setup after loading the view.
     }
-
+    
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: Bundle(for: PCVisionPickerPreviewController.self))
     }
@@ -45,14 +50,9 @@ public class PCVisionPickerPreviewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override public func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        playerCtr.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - 55)
+        playerCtr.view.frame = playerControllerContainer.bounds
     }
     
     @IBAction func cancelAction(_ sender: Any) {
@@ -62,14 +62,6 @@ public class PCVisionPickerPreviewController: UIViewController {
         self.playerCtr.player?.pause()
         handleDone?(image,videoUrl)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
+
