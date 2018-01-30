@@ -143,9 +143,8 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
             }
             else {
                 vision.captureSessionPreset = AVCaptureSession.Preset.hd1920x1080.rawValue
-//                vision.videoBitRate = PBJVideoBitRate1920x1080
-                vision.videoBitRate = 1920*1080*3
             }
+            vision.videoBitRate = 1920*1080*3
             vision.additionalCompressionProperties = [AVVideoProfileLevelKey:AVVideoProfileLevelH264BaselineAutoLevel]
         }
         
