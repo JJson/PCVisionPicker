@@ -252,7 +252,7 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
         }
         let videoPath = videoInfo[PBJVisionVideoPathKey]
         let thumbnail = videoInfo[PBJVisionVideoThumbnailKey] as! UIImage
-        let ctr = PCVisionPickerPreviewController()
+        let ctr = PCVisionPickerPreviewController(nibName: "PCVisionPickerPreviewController", bundle: nil)
         ctr.videoUrl = URL(fileURLWithPath: videoPath as! String)
         ctr.handleDone = {[weak self] _,videoUrl in
             self?.dismiss(animated: true, completion: {

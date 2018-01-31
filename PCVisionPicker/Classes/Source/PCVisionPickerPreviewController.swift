@@ -33,6 +33,7 @@ public class PCVisionPickerPreviewController: UIViewController {
             playerCtr.videoGravity = AVLayerVideoGravity.resizeAspect.rawValue
             let player = AVPlayer(url: videoUrl!)
             playerCtr.player = player
+            playerCtr.view.frame = playerControllerContainer.bounds
             playerControllerContainer.addSubview(playerCtr.view)
             playerCtr.view.autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin, .flexibleLeftMargin, .flexibleRightMargin, .flexibleHeight, .flexibleWidth]
         }
@@ -48,11 +49,6 @@ public class PCVisionPickerPreviewController: UIViewController {
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override public func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        playerCtr.view.frame = playerControllerContainer.bounds
     }
     
     @IBAction func cancelAction(_ sender: Any) {
