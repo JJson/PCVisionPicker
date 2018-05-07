@@ -174,6 +174,7 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
         }
         else if cameraMode == .video {
             if recording    {
+                SwiftProgressHUD.showWait()
                 PBJVision.sharedInstance().endVideoCapture()
             }
             else {
@@ -235,18 +236,24 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
             }
         }
     }
-    
+    public func visionSessionWillStart(_ vision: PBJVision) {
+        SwiftProgressHUD.showWait()
+    }
     public func visionDidStartVideoCapture(_ vision: PBJVision) {
+        SwiftProgressHUD.hideAllHUD()
         recording = true
     }
     public func visionSessionDidStop(_ vision: PBJVision) {
         recording = false
     }
+    public func visionDidEndVideoCapture(_ vision: PBJVision) {
+        SwiftProgressHUD.hideAllHUD()
+    }
     
     public func vision(_ vision: PBJVision, capturedVideo videoDict: [AnyHashable : Any]?, error: Error?) {
-        if error != nil {
-            return
-        }
+//        if error != nil {
+//            return
+//        }
         guard let videoInfo = videoDict else {
             return
         }

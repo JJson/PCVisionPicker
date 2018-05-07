@@ -13,7 +13,7 @@
 		1622EF49BF120581BCFA677617B85387 /* PBJVision-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B6BCCBA7EBCA5772D9C366F172EAACC /* PBJVision-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		16736730E8C25473C7FB6D8DBDC8C215 /* PBJGLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DDE6CAB7584D88BC8DBE7B1AC1B3E1E /* PBJGLProgram.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		227C465FDBE01260084B5F0778551525 /* PCVisionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517E5020E3132F9D221EE626F4F2C69A /* PCVisionPickerViewController.swift */; };
-		2A740B7B20A06BF4008C86E6 /* SwiftProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A740B7A20A06BF3008C86E6 /* SwiftProgressHUD.swift */; };
+		2A740B7D20A06E3B008C86E6 /* SwiftProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A740B7C20A06E3B008C86E6 /* SwiftProgressHUD.swift */; };
 		2FAC8BAA7D419118F5015C2599F914E1 /* Pods-PCVisionPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D915D7F7267AF997F8131177742E6A /* Pods-PCVisionPicker_Example-dummy.m */; };
 		2FD6E49D125610211B6B1ED38D40FB90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D806AE78DF02BEEAECF3B3B9309FAEF1 /* Foundation.framework */; };
 		434ED00718F722F3C933F56745231C4E /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 13EA931D3D1EE7A800E90632D7CDDB95 /* Shader.vsh */; };
@@ -85,7 +85,7 @@
 		230DC748C0B2E90BF4C84C4237AB15F2 /* PCVisionPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PCVisionPicker.modulemap; sourceTree = "<group>"; };
 		23A261E98ED8671D0AF83096E4DE1142 /* PBJVision.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVision.h; path = Source/PBJVision.h; sourceTree = "<group>"; };
 		297452AA8885284CA4BC9920A0CF750A /* PCVisionPickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PCVisionPickerViewController.xib; path = PCVisionPicker/Classes/Source/PCVisionPickerViewController.xib; sourceTree = "<group>"; };
-		2A740B7A20A06BF3008C86E6 /* SwiftProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftProgressHUD.swift; sourceTree = "<group>"; };
+		2A740B7C20A06E3B008C86E6 /* SwiftProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftProgressHUD.swift; path = PCVisionPicker/Classes/Source/SwiftProgressHUD.swift; sourceTree = "<group>"; };
 		2B6BCCBA7EBCA5772D9C366F172EAACC /* PBJVision-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVision-umbrella.h"; sourceTree = "<group>"; };
 		315A80F4023C18AF6314A1D9058703DF /* PBJMediaWriter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJMediaWriter.m; path = Source/PBJMediaWriter.m; sourceTree = "<group>"; };
 		320177035C6F13B268EE08FBD630FFE6 /* Pods-PCVisionPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PCVisionPicker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -234,7 +234,7 @@
 		39939A001A26AA27504DC0F1723C4CC9 /* PCVisionPicker */ = {
 			isa = PBXGroup;
 			children = (
-				2A740B7A20A06BF3008C86E6 /* SwiftProgressHUD.swift */,
+				2A740B7C20A06E3B008C86E6 /* SwiftProgressHUD.swift */,
 				62040C36D2AAE5096345BD6CE08A56C5 /* PBJFocusView.swift */,
 				BB8DECEC342271ACFD216546D214D2EB /* PCVisionPickerPreviewController.swift */,
 				B479A5B8794FE61B41F577C41EE59D18 /* PCVisionPickerPreviewController.xib */,
@@ -576,7 +576,7 @@
 				8DC2EB3446DEDFF8CEFB3D2DE3CD43B3 /* PBJFocusView.swift in Sources */,
 				8B39E029FF80FE9E3DAAF1AAF347B475 /* PCVisionPicker-dummy.m in Sources */,
 				8AE51D1556CE2D9FC5746F21BF1FAF58 /* PCVisionPickerPreviewController.swift in Sources */,
-				2A740B7B20A06BF4008C86E6 /* SwiftProgressHUD.swift in Sources */,
+				2A740B7D20A06E3B008C86E6 /* SwiftProgressHUD.swift in Sources */,
 				53D6DB9D8431945939F043CC1003F1F6 /* PCVisionPickerPreviewController.xib in Sources */,
 				227C465FDBE01260084B5F0778551525 /* PCVisionPickerViewController.swift in Sources */,
 				8C012EB3BCB3C747EC73F79070BA0A05 /* PCVisionPickerViewController.xib in Sources */,
