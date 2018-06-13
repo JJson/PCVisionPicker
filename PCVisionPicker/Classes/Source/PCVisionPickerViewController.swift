@@ -174,16 +174,21 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
         }
         else if cameraMode == .video {
             if recording    {
-                SwiftProgressHUD.showWait()
-                PBJVision.sharedInstance().endVideoCapture()
+                stopVideoCapture()
             }
             else {
-                PBJVision.sharedInstance().startVideoCapture()
+                startVideoCapture()
             }
-            
         }
     }
     
+    public func stopVideoCapture() {
+        SwiftProgressHUD.showWait()
+        PBJVision.sharedInstance().endVideoCapture()
+    }
+    public func startVideoCapture() {
+        PBJVision.sharedInstance().startVideoCapture()
+    }
     @IBAction func cancelAction(_ sender: Any) {
         self.dismiss(animated: true) {
             
