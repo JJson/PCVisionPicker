@@ -46,6 +46,9 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
     @IBOutlet weak var btLight: UIButton!
     @IBOutlet weak var btStart: UIButton!
     @IBOutlet weak var btSwitch: UIButton!
+    
+    fileprivate let orginIdleTimerDisabled = UIApplication.shared.isIdleTimerDisabled
+    
     public override var prefersStatusBarHidden: Bool {
         get {
             return true
@@ -252,9 +255,11 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
     public func visionDidStartVideoCapture(_ vision: PBJVision) {
         SwiftProgressHUD.hideAllHUD()
         recording = true
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     public func visionSessionDidStop(_ vision: PBJVision) {
         recording = false
+        UIApplication.shared.isIdleTimerDisabled = orginIdleTimerDisabled
     }
     public func visionDidEndVideoCapture(_ vision: PBJVision) {
         SwiftProgressHUD.hideAllHUD()
