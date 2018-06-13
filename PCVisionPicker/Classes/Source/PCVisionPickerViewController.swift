@@ -37,7 +37,7 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
     }
     public var handleDone:((UIImage?,URL?)->(Void))?
     
-    public var usePreview = false
+    public var skipPreview = false
     
     let focusView = PBJFocusView(frame: CGRect.zero)
     @IBOutlet weak var lbTimeTopConstraint: NSLayoutConstraint!
@@ -187,8 +187,8 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
         }
     }
     
-    public func stopVideoCapture(usePreview bUsePreview: Bool = false) {
-        usePreview = bUsePreview
+    public func stopVideoCapture(skipPreview bSkipPreview: Bool = false) {
+        skipPreview = bSkipPreview
         if PBJVision.sharedInstance().isRecording {
             SwiftProgressHUD.showWait()
             PBJVision.sharedInstance().endVideoCapture()
@@ -284,7 +284,7 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
                 self?.handleDone?(thumbnail,videoUrl)
             })
         }
-        if usePreview {
+        if skipPreview {
             self.dismiss(animated: true, completion: {
                 self.handleDone?(thumbnail,ctr.videoUrl)
             })
