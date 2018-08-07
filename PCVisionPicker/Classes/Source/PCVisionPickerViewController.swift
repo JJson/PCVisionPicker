@@ -295,7 +295,7 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
     public func vision(_ vision: PBJVision, didCaptureVideoSampleBuffer sampleBuffer: CMSampleBuffer) {
         let seconds = vision.capturedVideoSeconds
         let hour = Int(seconds / (60*60))
-        let minute = Int(seconds / 60)
+        let minute = Int((seconds / 60).truncatingRemainder(dividingBy: 60))
         let second = Int(seconds.truncatingRemainder(dividingBy: 60))
         lbTime.text = String(format: "%02d:%02d:%02d", hour,minute,second)
     }
