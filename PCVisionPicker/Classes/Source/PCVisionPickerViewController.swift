@@ -9,7 +9,7 @@
 import UIKit
 import PBJVision
 import ImageIO
-public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
+public class PCVisionPickerViewController: UIViewController {
     public var cameraMode:PBJCameraMode = .photo
     public var flashMode:PBJFlashMode = .auto {
         didSet{
@@ -35,6 +35,15 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
             }
         }
     }
+    
+    var touchEnable = true {
+        didSet {
+            btLight.isEnabled = touchEnable
+            btStart.isEnabled = touchEnable
+            btSwitch.isEnabled = touchEnable
+        }
+    }
+    
     public var handleDone:((UIImage?,URL?)->(Void))?
     
     public var skipPreview = false
@@ -104,6 +113,8 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
         super.viewDidAppear(animated)
         initViews()
         resetCapture()
+        SwiftProgressHUD.showWait()
+        touchEnable = false
         PBJVision.sharedInstance().startPreview()
     }
     
@@ -187,10 +198,14 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
         }
     }
     
-    public func stopVideoCapture(skipPreview bSkipPreview: Bool = false) {
-        skipPreview = bSkipPreview
+    public func stopVideoCapture(skipPreview bSkipPreview: Bool? = nil) {
+        if bSkipPreview != nil {
+            skipPreview = bSkipPreview!
+        }
+        
         if PBJVision.sharedInstance().isRecording {
             SwiftProgressHUD.showWait()
+            touchEnable = false
             PBJVision.sharedInstance().endVideoCapture()
         }
     }
@@ -216,7 +231,12 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
         let  adjustPoint = previewLayer.captureDevicePointConverted(fromLayerPoint: tapPoint)
         PBJVision.sharedInstance().focusExposeAndAdjustWhiteBalance(atAdjustedPoint: adjustPoint)
     }
-     // MARK: - PBJVisionDelegate
+    
+}
+
+// MARK: - PBJVisionDelegate
+extension PCVisionPickerViewController: PBJVisionDelegate {
+    
     
     public func visionDidStopFocus(_ vision: PBJVision) {
         DispatchQueue.main.async {[weak self] in
@@ -226,16 +246,16 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
     
     
     public func visionDidChangeExposure(_ vision: PBJVision) {
-//        DispatchQueue.main.async {[weak self] in
-//            self?.focusView.stopAnimation()
-//        }
+        //        DispatchQueue.main.async {[weak self] in
+        //            self?.focusView.stopAnimation()
+        //        }
     }
     
     public func vision(_ vision: PBJVision, capturedPhoto photoDict: [AnyHashable : Any]?, error: Error?) {
         if let photoInfo = photoDict {
             let photoData = photoInfo[PBJVisionPhotoJPEGKey] as! Data
             
-//            let tmpImage = UIImage(data: photoData)
+            //            let tmpImage = UIImage(data: photoData)
             
             let metadata = photoInfo[PBJVisionPhotoMetadataKey]  as! [AnyHashable : Any]
             if let image = UIImage(imageData: photoData, metaData: metadata) {
@@ -252,11 +272,14 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
             }
         }
     }
-    public func visionSessionWillStart(_ vision: PBJVision) {
-        SwiftProgressHUD.showWait()
-    }
-    public func visionDidStartVideoCapture(_ vision: PBJVision) {
+    
+    public func visionSessionDidStart(_ vision: PBJVision) {
         SwiftProgressHUD.hideAllHUD()
+        touchEnable = true
+    }
+    
+    public func visionDidStartVideoCapture(_ vision: PBJVision) {
+        SwiftProgressHUD.hideAllHUD()//其实这里的hide应该没什么用
         recording = true
         UIApplication.shared.isIdleTimerDisabled = true
     }
@@ -266,31 +289,36 @@ public class PCVisionPickerViewController: UIViewController,PBJVisionDelegate {
     }
     public func visionDidEndVideoCapture(_ vision: PBJVision) {
         SwiftProgressHUD.hideAllHUD()
+        touchEnable = true
     }
     
     public func vision(_ vision: PBJVision, capturedVideo videoDict: [AnyHashable : Any]?, error: Error?) {
-//        if error != nil {
-//            return
-//        }
+        //        if error != nil {
+        //            return
+        //        }
         guard let videoInfo = videoDict else {
             return
         }
         let videoPath = videoInfo[PBJVisionVideoPathKey]
         let thumbnail = videoInfo[PBJVisionVideoThumbnailKey] as! UIImage
-        let ctr = PCVisionPickerPreviewController(nibName: "PCVisionPickerPreviewController", bundle: nil)
-        ctr.videoUrl = URL(fileURLWithPath: videoPath as! String)
-        ctr.handleDone = {[weak self] _,videoUrl in
-            self?.dismiss(animated: true, completion: {
-                self?.handleDone?(thumbnail,videoUrl)
-            })
-        }
+        let videoUrl = URL(fileURLWithPath: videoPath as! String)
         if skipPreview {
             self.dismiss(animated: true, completion: {
-                self.handleDone?(thumbnail,ctr.videoUrl)
+                self.handleDone?(thumbnail,videoUrl)
             })
+        } else {
+            let ctr = PCVisionPickerPreviewController(nibName: "PCVisionPickerPreviewController", bundle: nil)
+            ctr.videoUrl = videoUrl
+            ctr.handleDone = {[weak self] _,videoUrl in
+                self?.dismiss(animated: true, completion: {
+                    self?.handleDone?(thumbnail,videoUrl)
+                })
+            }
+            
+            lbTime.text = "00:00:00"
+            navigationController?.pushViewController(ctr, animated: true)
         }
-        lbTime.text = "00:00:00"
-        navigationController?.pushViewController(ctr, animated: true)
+        
     }
     public func vision(_ vision: PBJVision, didCaptureVideoSampleBuffer sampleBuffer: CMSampleBuffer) {
         let seconds = vision.capturedVideoSeconds
