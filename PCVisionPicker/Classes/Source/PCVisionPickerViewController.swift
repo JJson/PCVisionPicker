@@ -13,7 +13,7 @@ public class PCVisionPickerViewController: UIViewController {
     public var cameraMode:PBJCameraMode = .photo
     public var flashMode:PBJFlashMode = .auto {
         didSet{
-            PBJVision.sharedInstance().flashMode = flashMode
+            vision.flashMode = flashMode
             switch flashMode {
             case .auto:
                 btLight.setImage(UIImage(named: "light_auto", in: bundle, compatibleWith: nil), for: .normal)
@@ -24,6 +24,7 @@ public class PCVisionPickerViewController: UIViewController {
             }
         }
     }
+    var vision = PBJVision()
     var bundle = Bundle(for: PCVisionPickerViewController.self)
     var recording = false{
         didSet{
@@ -83,8 +84,8 @@ public class PCVisionPickerViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     deinit {
-        PBJVision.sharedInstance().stopPreview()
-        PBJVision.sharedInstance().previewLayer.removeFromSuperlayer()
+        vision.stopPreview()
+        vision.previewLayer.removeFromSuperlayer()
         print("PCVisionPickerViewController deinit")
     }
     
@@ -117,20 +118,20 @@ public class PCVisionPickerViewController: UIViewController {
         resetCapture()
         SwiftProgressHUD.showWait()
         touchEnable = false
-        PBJVision.sharedInstance().startPreview()
+        vision.startPreview()
     }
     
     override public func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        PBJVision.sharedInstance().stopPreview()
-        PBJVision.sharedInstance().previewLayer.removeFromSuperlayer()
+        vision.stopPreview()
+        vision.previewLayer.removeFromSuperlayer()
         
     }
     
     
     // MARK: - functions
     func initViews() {
-        let previewLayer = PBJVision.sharedInstance().previewLayer
+        let previewLayer = vision.previewLayer
         previewLayer.frame = previewView.bounds
         previewLayer.videoGravity = .resizeAspectFill
         previewView.layer.addSublayer(previewLayer)
@@ -138,7 +139,6 @@ public class PCVisionPickerViewController: UIViewController {
     }
     
     func resetCapture() {
-        let vision = PBJVision.sharedInstance()
         vision.delegate = self
         if vision.isCameraDeviceAvailable(.back) {
             vision.cameraDevice = .back
@@ -183,12 +183,12 @@ public class PCVisionPickerViewController: UIViewController {
     }
     
     @IBAction func switchCameraAction(_ sender: Any) {
-        PBJVision.sharedInstance().cameraDevice = PBJVision.sharedInstance().cameraDevice.next()
+        vision.cameraDevice = vision.cameraDevice.next()
     }
     
     @IBAction func startAction(_ sender: Any) {
         if cameraMode == .photo {
-            PBJVision.sharedInstance().capturePhoto()
+            vision.capturePhoto()
         }
         else if cameraMode == .video {
             if recording    {
@@ -205,15 +205,15 @@ public class PCVisionPickerViewController: UIViewController {
             skipPreview = bSkipPreview!
         }
         
-        if PBJVision.sharedInstance().isRecording {
+        if vision.isRecording {
             SwiftProgressHUD.showWait()
             touchEnable = false
-            PBJVision.sharedInstance().endVideoCapture()
+            vision.endVideoCapture()
         }
     }
     public func startVideoCapture() {
-        if !PBJVision.sharedInstance().isRecording {
-            PBJVision.sharedInstance().startVideoCapture()
+        if !vision.isRecording {
+            vision.startVideoCapture()
         }
     
     }
@@ -229,9 +229,9 @@ public class PCVisionPickerViewController: UIViewController {
         focusView.center = tapPoint
         previewView.addSubview(focusView)
         focusView.startAnimation()
-        let previewLayer = PBJVision.sharedInstance().previewLayer
+        let previewLayer = vision.previewLayer
         let  adjustPoint = previewLayer.captureDevicePointConverted(fromLayerPoint: tapPoint)
-        PBJVision.sharedInstance().focusExposeAndAdjustWhiteBalance(atAdjustedPoint: adjustPoint)
+        vision.focusExposeAndAdjustWhiteBalance(atAdjustedPoint: adjustPoint)
     }
     
 }
