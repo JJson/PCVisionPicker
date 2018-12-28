@@ -83,6 +83,8 @@ public class PCVisionPickerViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     deinit {
+        PBJVision.sharedInstance().stopPreview()
+        PBJVision.sharedInstance().previewLayer.removeFromSuperlayer()
         print("PCVisionPickerViewController deinit")
     }
     
@@ -300,7 +302,7 @@ extension PCVisionPickerViewController: PBJVisionDelegate {
             return
         }
         let videoPath = videoInfo[PBJVisionVideoPathKey]
-        let thumbnail = videoInfo[PBJVisionVideoThumbnailKey] as! UIImage
+        let thumbnail = videoInfo[PBJVisionVideoThumbnailKey] as? UIImage
         let videoUrl = URL(fileURLWithPath: videoPath as! String)
         if skipPreview {
             self.dismiss(animated: true, completion: {

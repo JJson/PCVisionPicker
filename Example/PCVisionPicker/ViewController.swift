@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBAction func buttonAction(_ sender: Any) {
         let ctr = PCVisionPickerViewController(nibName: "PCVisionPickerViewController", bundle: nil)
         ctr.cameraMode = .video
+        ctr.skipPreview = true
         ctr.handleDone = {image,videoUrl in
             if image != nil {
                 let path = NSHomeDirectory() + "/Documents/image.jpg"
