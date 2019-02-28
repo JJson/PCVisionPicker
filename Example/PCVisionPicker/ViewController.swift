@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         let ctr = PCVisionPickerViewController(nibName: "PCVisionPickerViewController", bundle: nil)
         ctr.cameraMode = .video
         ctr.skipPreview = true
+        ctr.maxDuration = 5
         ctr.handleDone = {image,videoUrl in
             if image != nil {
                 let path = NSHomeDirectory() + "/Documents/image.jpg"
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
                 try? imageData?.write(to: URL(fileURLWithPath: path))
             }
             if videoUrl != nil {
-                let path = NSHomeDirectory() + "/Documents/video.mp4"
+                let path = NSHomeDirectory() + "/Documents/video\(arc4random()%100000).mp4"
                 try? FileManager.default.moveItem(at: videoUrl!, to: URL(fileURLWithPath: path))
             }
         }

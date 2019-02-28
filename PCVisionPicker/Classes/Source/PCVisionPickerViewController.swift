@@ -49,6 +49,8 @@ public class PCVisionPickerViewController: UIViewController {
     
     public var skipPreview = false
     
+    public var maxDuration = -1
+    
     let focusView = PBJFocusView(frame: CGRect.zero)
     @IBOutlet weak var lbTimeTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
@@ -75,6 +77,9 @@ public class PCVisionPickerViewController: UIViewController {
             lbTime.isHidden = false
         }
         // Do any additional setup after loading the view.
+        if maxDuration > 0 {
+            vision.maximumCaptureDuration = CMTimeMake(Int64(maxDuration), 1)
+        }
     }
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: Bundle(for: PCVisionPickerViewController.self))
