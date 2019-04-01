@@ -62,6 +62,8 @@ public class PCVisionPickerViewController: UIViewController {
     @IBOutlet weak var btSwitch: UIButton!
     
     fileprivate let orginIdleTimerDisabled = UIApplication.shared.isIdleTimerDisabled
+    /// 是否已经适配safeArea
+    fileprivate var hasOffsetForSafeArea = false
     
     public override var prefersStatusBarHidden: Bool {
         get {
@@ -97,10 +99,12 @@ public class PCVisionPickerViewController: UIViewController {
     override public func viewSafeAreaInsetsDidChange() {
         if #available(iOS 11.0, *) {
             super.viewSafeAreaInsetsDidChange()
+            guard hasOffsetForSafeArea == false else { return }
+            guard UIDevice.current.isIPhoneX() else { return }
             lbTimeTopConstraint.constant += view.safeAreaInsets.top
             previewTopConstraint.constant += view.safeAreaInsets.top
             bottomConstraint.constant = view.safeAreaInsets.bottom
-            
+            hasOffsetForSafeArea = true
         } else {
             // Fallback on earlier versions
         }
@@ -391,6 +395,8 @@ extension UIImage {
 extension UIDevice {
     public func isIPhoneX() -> Bool {
         if UIScreen.main.bounds.height == 812 {
+            return true
+        } else if UIApplication.shared.statusBarFrame.height == 44 {
             return true
         }
         
