@@ -398,6 +398,8 @@ extension UIDevice {
             return true
         } else if UIApplication.shared.statusBarFrame.height == 44 {
             return true
+        }  else if #available(iOS 11.0, *), let bottom = UIApplication.shared.keyWindow?.safeAreaInsets.bottom, bottom > 0 {
+            return true
         }
         
         return false
