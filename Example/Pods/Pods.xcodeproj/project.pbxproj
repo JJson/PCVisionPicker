@@ -12,7 +12,7 @@
 		0F03B82CF750BCFCF91EF29DFDFA48C8 /* NextLevel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 490B0C90CAC4EAFA9C066A3EA2C1E519 /* NextLevel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		224CF31D7430B08BDD6C13F94AE97D7A /* PCVisionImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2BEF184CC9533637BE0B629AC4967C /* PCVisionImages.xcassets */; };
 		262D765AE7EB47EC5DDB4518116C29E2 /* PBJFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A74088FFA41BC7EB71DE4404F0C290D /* PBJFocusView.swift */; };
-		2A16C01124E3C88A0042D7AF /* NextLevelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A16C00F24E3C87F0042D7AF /* NextLevelExtension.swift */; };
+		2A16C01324E3D6CE0042D7AF /* NextLevelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A16C01224E3D6CE0042D7AF /* NextLevelExtension.swift */; };
 		2C8EFF10F09EE7CB85BD67DD8B1BD6ED /* NextLevel+CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F33AD2E1CCB382E737BA80DE763502 /* NextLevel+CIContext.swift */; };
 		3456B8FB354E919111C8C5AC3690C0A5 /* PCVisionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F52A88FFA8838047FEA76641977FC /* PCVisionPickerViewController.swift */; };
 		3C5DF3DD680E0EF8441E0408098A0E1E /* Pods-PCVisionPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 253AB6FB2458AF009FD23726DFC31C86 /* Pods-PCVisionPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -78,7 +78,7 @@
 		2368E916F3C66BB2FEFE0AAD20D4DB43 /* NextLevelGIFCreator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelGIFCreator.swift; path = Sources/NextLevelGIFCreator.swift; sourceTree = "<group>"; };
 		253AB6FB2458AF009FD23726DFC31C86 /* Pods-PCVisionPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PCVisionPicker_Example-umbrella.h"; sourceTree = "<group>"; };
 		286C5ABB094FBA13B40CABA2033CB6EA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2A16C00F24E3C87F0042D7AF /* NextLevelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLevelExtension.swift; sourceTree = "<group>"; };
+		2A16C01224E3D6CE0042D7AF /* NextLevelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NextLevelExtension.swift; path = PCVisionPicker/Classes/Source/NextLevelExtension.swift; sourceTree = "<group>"; };
 		2A3D149D1F7C6AB377BA24D3109F757C /* PCVisionPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PCVisionPicker-prefix.pch"; sourceTree = "<group>"; };
 		30ADD19E475A7B4025ADCD2F7E56E256 /* NextLevelConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelConfiguration.swift; path = Sources/NextLevelConfiguration.swift; sourceTree = "<group>"; };
 		31056835EE6C12B6AE8A489F9AD3FD42 /* NextLevel+UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+UIImage.swift"; path = "Sources/NextLevel+UIImage.swift"; sourceTree = "<group>"; };
@@ -203,8 +203,8 @@
 		4FE6D33A952DF63EB1A2DAAD0FC90F5F /* PCVisionPicker */ = {
 			isa = PBXGroup;
 			children = (
+				2A16C01224E3D6CE0042D7AF /* NextLevelExtension.swift */,
 				8A74088FFA41BC7EB71DE4404F0C290D /* PBJFocusView.swift */,
-				2A16C00F24E3C87F0042D7AF /* NextLevelExtension.swift */,
 				ECBE001C7E7F892585A445950B7C2D5B /* PCVisionPickerPreviewController.swift */,
 				101C43C449C7FA402F1992F945123072 /* PCVisionPickerPreviewController.xib */,
 				521F52A88FFA8838047FEA76641977FC /* PCVisionPickerViewController.swift */,
@@ -541,7 +541,7 @@
 				3456B8FB354E919111C8C5AC3690C0A5 /* PCVisionPickerViewController.swift in Sources */,
 				B1929A3A287CC9BA0C3984D41D7BEC94 /* PCVisionPickerViewController.xib in Sources */,
 				937E6A9513F92418F1EDB20EAD38FA52 /* SwiftProgressHUD.swift in Sources */,
-				2A16C01124E3C88A0042D7AF /* NextLevelExtension.swift in Sources */,
+				2A16C01324E3D6CE0042D7AF /* NextLevelExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
