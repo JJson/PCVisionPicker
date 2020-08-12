@@ -22,13 +22,13 @@ class ViewController: UIViewController {
 
     @IBAction func buttonAction(_ sender: Any) {
         let ctr = PCVisionPickerViewController(nibName: "PCVisionPickerViewController", bundle: nil)
-        ctr.cameraMode = .video
+        ctr.cameraMode = .photo
         ctr.skipPreview = true
-        ctr.maxDuration = 5
+//        ctr.maxDuration = 5
         ctr.handleDone = {image,videoUrl in
             if image != nil {
                 let path = NSHomeDirectory() + "/Documents/image.jpg"
-                let imageData = UIImageJPEGRepresentation(image!, 0.5)
+                let imageData = UIImageJPEGRepresentation(image!, 1)
                 try? imageData?.write(to: URL(fileURLWithPath: path))
             }
             if videoUrl != nil {

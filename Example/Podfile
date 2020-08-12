@@ -1,6 +1,6 @@
 use_frameworks!
-platform :ios, '8.0'
-source 'https://github.com/JJson/PBJVision.git'
+platform :ios, '10.0'
+#source 'https://github.com/JJson/NextLevel.git'
 target 'PCVisionPicker_Example' do
   pod 'PCVisionPicker', :path => '../'
 

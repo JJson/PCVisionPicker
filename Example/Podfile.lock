@@ -1,19 +1,23 @@
 PODS:
-  - PBJVision (0.5.2.JJSon)
-  - PCVisionPicker (0.1.0):
-    - PBJVision (~> 0.5.2.JJSon)
+  - NextLevel (0.16.3)
+  - PCVisionPicker (1.1):
+    - NextLevel (~> 0.16.3)
 
 DEPENDENCIES:
   - PCVisionPicker (from `../`)
 
+SPEC REPOS:
+  trunk:
+    - NextLevel
+
 EXTERNAL SOURCES:
   PCVisionPicker:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  PBJVision: 5942ed03bc5266a030f4f2eaef539521d3f71a15
-  PCVisionPicker: 57b70a220127517f82eb79efc59ec2b242f4ea20
+  NextLevel: 76dab336f758e6a98ef6b4917de1481324cffe04
+  PCVisionPicker: 8c1b2a9e06f56526ef6e807d4f1af247c63ab09c
 
-PODFILE CHECKSUM: 1c175a9715f52d5498769cbe8b619d9acf9f1d05
+PODFILE CHECKSUM: b509b66895b993e0a3bc1bd46acca19aee13cabd
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.9.1

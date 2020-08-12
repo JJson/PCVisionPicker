@@ -1,6 +1,6 @@
 {
   "name": "PCVisionPicker",
-  "version": "0.1.0",
+  "version": "1.1",
   "summary": "A short description of PCVisionPicker.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/JJSon/PCVisionPicker",
@@ -12,11 +12,11 @@
     "JJSon": "515867115@qq.com"
   },
   "source": {
-    "git": "https://github.com/JJSon/PCVisionPicker.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/JJSon/NextLevel.git",
+    "tag": "1.1"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
   "source_files": "PCVisionPicker/Classes/**/*",
   "resources": [
@@ -24,8 +24,8 @@
     "PCVisionPicker/Assets/PCVisionImages.xcassets"
   ],
   "dependencies": {
-    "PBJVision": [
-      "~> 0.5.2.JJSon"
+    "NextLevel": [
+      "~> 0.16.3"
     ]
   }
 }

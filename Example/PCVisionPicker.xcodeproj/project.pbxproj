@@ -190,7 +190,6 @@
 				2A2956EE1FFF712000F9B06B /* Frameworks */,
 				2A2956EF1FFF712000F9B06B /* Headers */,
 				2A2956F01FFF712000F9B06B /* Resources */,
-				2BB986C6B150FC34DB8EBB6E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,7 +209,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				260C5F641E0D46191E532B38 /* [CP] Embed Pods Frameworks */,
-				8182A35517C8C46E4850C4D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +246,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -289,33 +288,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PCVisionPicker_Example/Pods-PCVisionPicker_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PBJVision/PBJVision.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PCVisionPicker_Example/Pods-PCVisionPicker_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NextLevel/NextLevel.framework",
 				"${BUILT_PRODUCTS_DIR}/PCVisionPicker/PCVisionPicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PBJVision.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NextLevel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PCVisionPicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCVisionPicker_Example/Pods-PCVisionPicker_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2BB986C6B150FC34DB8EBB6E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCVisionPicker/Pods-PCVisionPicker-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PCVisionPicker_Example/Pods-PCVisionPicker_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		49046CFC2409D70046B5DD62 /* [CP] Check Pods Manifest.lock */ = {
@@ -334,21 +318,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8182A35517C8C46E4850C4D1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCVisionPicker_Example/Pods-PCVisionPicker_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD7C73F80B988F4415CB1F02 /* [CP] Check Pods Manifest.lock */ = {
@@ -585,7 +554,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7XHN7A3597;
 				INFOPLIST_FILE = PCVisionPicker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newcunnar.PCVisionPicker-Example";
@@ -605,7 +574,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7XHN7A3597;
 				INFOPLIST_FILE = PCVisionPicker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.newcunnar.PCVisionPicker-Example";
