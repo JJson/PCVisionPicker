@@ -30,7 +30,7 @@ public class PCVisionPickerPreviewController: UIViewController {
         
         if videoUrl != nil {
             playerCtr.showsPlaybackControls = true
-            playerCtr.videoGravity = AVLayerVideoGravity.resizeAspect.rawValue
+            playerCtr.videoGravity = .resizeAspect
             let player = AVPlayer(url: videoUrl!)
             playerCtr.player = player
             playerCtr.view.frame = playerControllerContainer.bounds

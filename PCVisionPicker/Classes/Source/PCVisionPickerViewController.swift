@@ -299,7 +299,7 @@ public class PCVisionPickerViewController: UIViewController {
             nextLevel.videoConfiguration.bitRate = 1920*1080*3
             nextLevel.videoConfiguration.profileLevel = AVVideoProfileLevelH264BaselineAutoLevel
             if maxDuration > 0 {
-                nextLevel.videoConfiguration.maximumCaptureDuration = CMTimeMakeWithSeconds(Float64(maxDuration), 1)
+                nextLevel.videoConfiguration.maximumCaptureDuration = CMTimeMakeWithSeconds(Float64(maxDuration), preferredTimescale: 1)
             }
         }
         
