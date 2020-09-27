@@ -287,6 +287,11 @@ public class PCVisionPickerViewController: UIViewController {
 
         if cameraMode == .photo {
             nextLevel.photoConfiguration.preset = .hd1280x720
+            if #available(iOS 11.0, *) {
+                nextLevel.photoConfiguration.codec = .jpeg
+            } else {
+                
+            }
         }
         else {
             if UIDevice.current.isIPhoneX() {
