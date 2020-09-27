@@ -158,6 +158,9 @@ public class PCVisionPickerViewController: UIViewController {
     /// 是否已经适配safeArea
     fileprivate var hasOffsetForSafeArea = false
     
+    fileprivate var camaraAuthReady = false
+    fileprivate var micAuthReady = false
+    
     public override var prefersStatusBarHidden: Bool {
         get {
             return true
@@ -219,27 +222,75 @@ public class PCVisionPickerViewController: UIViewController {
 
     }
     
+    fileprivate func prepare() {
+        do {
+            initViews()
+            SwiftProgressHUD.showWait()
+            resetCapture()
+            try nextLevel.start()
+        } catch {
+            print("NextLevel, failed to start camera session")
+        }
+    }
+    
     override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if NextLevel.authorizationStatus(forMediaType: AVMediaType.video) == .authorized &&
             NextLevel.authorizationStatus(forMediaType: AVMediaType.audio) == .authorized {
-            do {
-                initViews()
-                
-//                SwiftProgressHUD.showWait()
-//                touchEnable = false
-                SwiftProgressHUD.showWait()
-                resetCapture()
-                try nextLevel.start()
-//                resetCapture()
-            } catch {
-                print("NextLevel, failed to start camera session")
-            }
+            prepare()
         } else {
-            NextLevel.requestAuthorization(forMediaType: .video) { (_, _) in
-                
+            let group = DispatchGroup()
+            group.enter()
+            NextLevel.requestAuthorization(forMediaType: .video) { [weak self] (_, status) in
+                guard let strongSelf = self else { return }
+                if status == .notAuthorized {
+
+                } else {
+                    strongSelf.camaraAuthReady = true
+                }
+                group.leave()
             }
-            NextLevel.requestAuthorization(forMediaType: .audio) { (_, _) in
+            group.enter()
+            NextLevel.requestAuthorization(forMediaType: .audio) {[weak self] (_, status) in
+                guard let strongSelf = self else { return }
+                if status == .notAuthorized {
+                    
+                } else {
+                    strongSelf.micAuthReady = true
+                }
+                group.leave()
+            }
+            
+            group.notify(queue: .main) { [weak self] in
+                guard let strongSelf = self else { return }
+                if !strongSelf.camaraAuthReady {
+                    let alert = UIAlertController(title: "提示", message: "请开启摄像头权限", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "确定", style: .default) { (_) in
+                        if let rootCtr = strongSelf.navigationController?.viewControllers.first,
+                            rootCtr != strongSelf {
+                            strongSelf.navigationController?.popViewController(animated: true)
+                        } else {
+                            strongSelf.dismiss(animated: true, completion: nil)
+                        }
+                    }
+                    alert.addAction(action)
+                    strongSelf.present(alert, animated: true, completion: nil)
+                } else if !strongSelf.micAuthReady,
+                    strongSelf.cameraMode != .photo {
+                    let alert = UIAlertController(title: "提示", message: "请开启麦克风权限", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "确定", style: .default) { (_) in
+                        if let rootCtr = strongSelf.navigationController?.viewControllers.first,
+                            rootCtr != strongSelf {
+                            strongSelf.navigationController?.popViewController(animated: true)
+                        } else {
+                            strongSelf.dismiss(animated: true, completion: nil)
+                        }
+                    }
+                    alert.addAction(action)
+                    strongSelf.present(alert, animated: true, completion: nil)
+                } else {
+                    strongSelf.prepare()
+                }
                 
             }
         }
