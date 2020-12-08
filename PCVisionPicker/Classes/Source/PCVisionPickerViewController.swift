@@ -82,32 +82,6 @@ extension NextLevelDevicePosition {
     }
 }
 
-//public enum PCVisionPickerCameraDevice: Int {
-//    case back = 0
-//    case front
-//
-//    func next() -> PCVisionPickerCameraDevice {
-//        let value = self.rawValue + 1
-//        if  value <= PCVisionPickerCameraDevice.front.rawValue{
-//            let result = PCVisionPickerCameraDevice(rawValue: value)
-//            return result!
-//        }
-//        else {
-//            return .back
-//        }
-//
-//    }
-//
-//    func toNextLevelDevicePosition() -> NextLevelDevicePosition {
-//        switch self {
-//
-//        case .back:
-//            return .back
-//        case .front:
-//            return .front
-//        }
-//    }
-//}
 
 public class PCVisionPickerViewController: UIViewController {
     public var cameraMode:PCVisionPickerMode = .photo
@@ -116,7 +90,6 @@ public class PCVisionPickerViewController: UIViewController {
             updateFlashMode()
         }
     }
-//    var vision = PBJVision()
     var nextLevel = NextLevel.shared
     var bundle = Bundle(for: PCVisionPickerViewController.self)
     var recording = false{
@@ -191,8 +164,6 @@ public class PCVisionPickerViewController: UIViewController {
     }
     deinit {
         nextLevel.stop()
-//        vision.stopPreview()
-//        vision.previewLayer.removeFromSuperlayer()
         print("PCVisionPickerViewController deinit")
     }
     
@@ -294,13 +265,10 @@ public class PCVisionPickerViewController: UIViewController {
                 
             }
         }
-//        vision.startPreview()
     }
     
     override public func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        vision.stopPreview()
-//        vision.previewLayer.removeFromSuperlayer()
         nextLevel.stop()
     }
     
@@ -358,8 +326,6 @@ public class PCVisionPickerViewController: UIViewController {
                 nextLevel.videoConfiguration.maximumCaptureDuration = CMTimeMakeWithSeconds(Float64(maxDuration), preferredTimescale: 1)
             }
         }
-        
-        
     }
     
     func photoDidCaptured(withData photoData: Data, metaData: [String: Any]) {
@@ -429,15 +395,12 @@ public class PCVisionPickerViewController: UIViewController {
     }
     
     @IBAction func switchCameraAction(_ sender: Any) {
-//        vision.cameraDevice = vision.cameraDevice.next()
         nextLevel.devicePosition = nextLevel.devicePosition.next()
     }
     
     @IBAction func startAction(_ sender: Any) {
         if cameraMode == .photo {
-//            vision.capturePhoto()
             nextLevel.capturePhoto()
-//            nextLevel.capturePhotoFromVideo()
         }
         else if cameraMode == .video {
             if recording    {
@@ -568,11 +531,9 @@ extension PCVisionPickerViewController: NextLevelDeviceDelegate {
     }
     
     public func nextLevelDidChangeExposure(_ nextLevel: NextLevel) {
-//        if let focusView = self.focusView {
-            if focusView.superview != nil {
-                focusView.stopAnimation()
-            }
-//        }
+        if focusView.superview != nil {
+            focusView.stopAnimation()
+        }
     }
     
     public func nextLevelWillChangeWhiteBalance(_ nextLevel: NextLevel) {
@@ -629,8 +590,7 @@ extension PCVisionPickerViewController: NextLevelVideoDelegate {
     
     // video recording session
     public func nextLevel(_ nextLevel: NextLevel, didSetupVideoInSession session: NextLevelSession) {
-//        SwiftProgressHUD.hideAllHUD()
-//        touchEnable = true
+
     }
     
     public func nextLevel(_ nextLevel: NextLevel, didSetupAudioInSession session: NextLevelSession) {
@@ -643,6 +603,7 @@ extension PCVisionPickerViewController: NextLevelVideoDelegate {
     
     public func nextLevel(_ nextLevel: NextLevel, didCompleteClip clip: NextLevelClip, inSession session: NextLevelSession) {
         recording = false
+        UIApplication.shared.isIdleTimerDisabled = orginIdleTimerDisabled
     }
     
     public func nextLevel(_ nextLevel: NextLevel, didAppendVideoSampleBuffer sampleBuffer: CMSampleBuffer, inSession session: NextLevelSession) {
@@ -718,133 +679,10 @@ extension PCVisionPickerViewController: NextLevelPhotoDelegate {
     }
 
     public func nextLevelDidCompletePhotoCapture(_ nextLevel: NextLevel) {
-//        nextLevel.ph
-    }
-    
-}
-/*
-// MARK: - PBJVisionDelegate
-extension PCVisionPickerViewController: PBJVisionDelegate {
-    
-    
-    public func visionDidStopFocus(_ vision: PBJVision) {
-        DispatchQueue.main.async {[weak self] in
-            self?.focusView.stopAnimation()
-        }
-    }
-    
-    
-    public func visionDidChangeExposure(_ vision: PBJVision) {
-        //        DispatchQueue.main.async {[weak self] in
-        //            self?.focusView.stopAnimation()
-        //        }
-    }
-    
-    public func vision(_ vision: PBJVision, capturedPhoto photoDict: [AnyHashable : Any]?, error: Error?) {
-        if let photoInfo = photoDict {
-            let photoData = photoInfo[PBJVisionPhotoJPEGKey] as! Data
-            
-            //            let tmpImage = UIImage(data: photoData)
-            
-            let metadata = photoInfo[PBJVisionPhotoMetadataKey]  as! [AnyHashable : Any]
-            if let image = UIImage(imageData: photoData, metaData: metadata) {
-                let previewCtr = PCVisionPickerPreviewController(nibName: "PCVisionPickerPreviewController", bundle: nil)
-                previewCtr.image = image
-                previewCtr.handleDone = {[weak self] image,videoUrl in
-                    self?.dismiss(animated: true, completion: {
-                        self?.handleDone?(image,videoUrl)
-                    })
-                    
-                }
-                self.navigationController?.pushViewController(previewCtr, animated: true)
-
-            }
-        }
-    }
-    
-    public func visionSessionDidStart(_ vision: PBJVision) {
-        SwiftProgressHUD.hideAllHUD()
-        touchEnable = true
-    }
-    
-    public func visionDidStartVideoCapture(_ vision: PBJVision) {
-        SwiftProgressHUD.hideAllHUD()//其实这里的hide应该没什么用
-        recording = true
-        UIApplication.shared.isIdleTimerDisabled = true
-    }
-    public func visionSessionDidStop(_ vision: PBJVision) {
-        recording = false
-        UIApplication.shared.isIdleTimerDisabled = orginIdleTimerDisabled
-    }
-    public func visionDidEndVideoCapture(_ vision: PBJVision) {
-        SwiftProgressHUD.hideAllHUD()
-        touchEnable = true
-    }
-    
-    public func vision(_ vision: PBJVision, capturedVideo videoDict: [AnyHashable : Any]?, error: Error?) {
-        //        if error != nil {
-        //            return
-        //        }
-        guard let videoInfo = videoDict else {
-            return
-        }
-        let videoPath = videoInfo[PBJVisionVideoPathKey]
-        let thumbnail = videoInfo[PBJVisionVideoThumbnailKey] as? UIImage
-        let videoUrl = URL(fileURLWithPath: videoPath as! String)
-        if skipPreview {
-            self.dismiss(animated: true, completion: {
-                self.handleDone?(thumbnail,videoUrl)
-            })
-        } else {
-            let ctr = PCVisionPickerPreviewController(nibName: "PCVisionPickerPreviewController", bundle: nil)
-            ctr.videoUrl = videoUrl
-            ctr.handleDone = {[weak self] _,videoUrl in
-                self?.dismiss(animated: true, completion: {
-                    self?.handleDone?(thumbnail,videoUrl)
-                })
-            }
-            
-            lbTime.text = "00:00:00"
-            navigationController?.pushViewController(ctr, animated: true)
-        }
         
     }
-    public func vision(_ vision: PBJVision, didCaptureVideoSampleBuffer sampleBuffer: CMSampleBuffer) {
-        let seconds = vision.capturedVideoSeconds
-        let hour = Int(seconds / (60*60))
-        let minute = Int((seconds / 60).truncatingRemainder(dividingBy: 60))
-        let second = Int(seconds.truncatingRemainder(dividingBy: 60))
-        lbTime.text = String(format: "%02d:%02d:%02d", hour,minute,second)
-    }
+    
 }
-*/
-
-//extension PBJFlashMode {
-//    func next() -> PBJFlashMode {
-//        let value = self.rawValue + 1
-//        if  value <= PBJFlashMode.auto.rawValue{
-//            let result = PBJFlashMode(rawValue: value)
-//            return result!
-//        }
-//        else {
-//            return .off
-//        }
-//    }
-//}
-
-//extension PBJCameraDevice {
-//    func next() -> PBJCameraDevice {
-//        let value = self.rawValue + 1
-//        if  value <= PBJCameraDevice.front.rawValue{
-//            let result = PBJCameraDevice(rawValue: value)
-//            return result!
-//        }
-//        else {
-//            return .back
-//        }
-//
-//    }
-//}
 
 extension UIImage {
     convenience init?(imageData:Data,metaData:[AnyHashable:Any]) {
