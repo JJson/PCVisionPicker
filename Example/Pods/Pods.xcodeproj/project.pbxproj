@@ -10,41 +10,48 @@
 		008387D717C1EE30AAF5F1A4A7792EF6 /* NextLevelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182819D512C5ABCFA9ABD69AC0905CAB /* NextLevelProtocols.swift */; };
 		0EE049DB408B136E93980D7CC39845E2 /* NextLevel+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA86EFDE3216E6DB4DF5AB7F169C391 /* NextLevel+Foundation.swift */; };
 		0F03B82CF750BCFCF91EF29DFDFA48C8 /* NextLevel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 490B0C90CAC4EAFA9C066A3EA2C1E519 /* NextLevel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		224CF31D7430B08BDD6C13F94AE97D7A /* PCVisionImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2BEF184CC9533637BE0B629AC4967C /* PCVisionImages.xcassets */; };
-		262D765AE7EB47EC5DDB4518116C29E2 /* PBJFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A74088FFA41BC7EB71DE4404F0C290D /* PBJFocusView.swift */; };
-		2A16C01324E3D6CE0042D7AF /* NextLevelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A16C01224E3D6CE0042D7AF /* NextLevelExtension.swift */; };
 		2C8EFF10F09EE7CB85BD67DD8B1BD6ED /* NextLevel+CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F33AD2E1CCB382E737BA80DE763502 /* NextLevel+CIContext.swift */; };
-		3456B8FB354E919111C8C5AC3690C0A5 /* PCVisionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F52A88FFA8838047FEA76641977FC /* PCVisionPickerViewController.swift */; };
+		36FA1BE729A96E10894B6727C1EDD448 /* PCVisionPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 115E610A468E3F2A1B833D943F530AA8 /* PCVisionPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C5DF3DD680E0EF8441E0408098A0E1E /* Pods-PCVisionPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 253AB6FB2458AF009FD23726DFC31C86 /* Pods-PCVisionPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		405A22F0FA3602A7E5F68DBAEE99895C /* Pods-PCVisionPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9D5CC7851CD54AFC759E3D9298A041 /* Pods-PCVisionPicker-dummy.m */; };
 		5160D706EA69759ED3263B0D8EB70F1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A198393F5012A8FC07FBC299293A05E /* Foundation.framework */; };
 		51A9AE833FE266B3E51DE20D48A682FE /* NextLevel+CMSampleBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627F114C031F7111CEB946B2060FC6F /* NextLevel+CMSampleBuffer.swift */; };
-		5994EF468A9DF130D428F99020BAFC45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A198393F5012A8FC07FBC299293A05E /* Foundation.framework */; };
-		5A723949B5B938678E2F0702AAC1254A /* Pods-PCVisionPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDD7128A92EB9A8B2CE845E11C63D5DD /* Pods-PCVisionPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		568452997F25264C646F5C696E94E3C7 /* Pods-PCVisionPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9D5CC7851CD54AFC759E3D9298A041 /* Pods-PCVisionPicker-dummy.m */; };
+		5BC59FAF0A7977DEC3A89E2260B34516 /* SwiftProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F9EECF87F156670EA613DBC3C9F121 /* SwiftProgressHUD.swift */; };
 		62C808E0AE4013FC87ED9ECCF10D40E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A198393F5012A8FC07FBC299293A05E /* Foundation.framework */; };
 		64A8961147E07FAC8D372299922946D1 /* NextLevelGIFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2368E916F3C66BB2FEFE0AAD20D4DB43 /* NextLevelGIFCreator.swift */; };
 		65EBE0ED671B5B5D770C653CAB84E05D /* Pods-PCVisionPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ADD0F6551007FE375C0419BB23C0D7 /* Pods-PCVisionPicker_Example-dummy.m */; };
-		7B4E9A3CB66D3BEB1C501E1ADF1B210C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A198393F5012A8FC07FBC299293A05E /* Foundation.framework */; };
+		717163D44B1642D4D7F7EA0FFD21775D /* NextLevel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6991F8408B15A119EAECCB80F0C699 /* NextLevel.framework */; };
+		7295ADB146183A8F1873478C831B7073 /* PCVisionPickerPreviewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 3AB40BBA61DD6594A016B424BBB60827 /* PCVisionPickerPreviewController.xib */; };
+		752ECBECC38587A39EA6634CC604A4C7 /* NextLevelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F4EEFA28CCE4B67C59F99DEDA70FAF /* NextLevelExtension.swift */; };
 		806A9D38D1BFE5E8796190E8EAF27ADB /* NextLevelClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52708CFAF74E6D679BD84A243AB318E /* NextLevelClip.swift */; };
-		937E6A9513F92418F1EDB20EAD38FA52 /* SwiftProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF7DBD66EE94FF710D3F00DFBC9B92A /* SwiftProgressHUD.swift */; };
+		8DDE37E63B59554C39BA3D751A280C7B /* PCVisionPickerViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = DC0B5F840D6FAEAB87E55053C0336DE5 /* PCVisionPickerViewController.xib */; };
+		8E4996F0FC846D7E84A347A511F438FD /* Pods-PCVisionPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDD7128A92EB9A8B2CE845E11C63D5DD /* Pods-PCVisionPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A104868ABE1A0F1F8EBEDE96F8B25498 /* NextLevel+AVFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589154D32F164D271E9CF4057359B13F /* NextLevel+AVFoundation.swift */; };
+		A612DD3111C7D7EB404C0D5EC78C736B /* PCVisionImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D4DE42F3532D22F7032CAF93025F28F /* PCVisionImages.xcassets */; };
+		A856302420CA7113BAD93A79574D3F84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A198393F5012A8FC07FBC299293A05E /* Foundation.framework */; };
 		AAD9304BEE9A708D3940B900089774BF /* NextLevelBufferRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4843E5768F88374F14F68CF803B7AE7D /* NextLevelBufferRenderer.swift */; };
-		AD7CBB1F54CECDF929BF78C43495AC4E /* PCVisionPickerPreviewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 101C43C449C7FA402F1992F945123072 /* PCVisionPickerPreviewController.xib */; };
-		B1929A3A287CC9BA0C3984D41D7BEC94 /* PCVisionPickerViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = E57E5266AF4437E266043659391CCA9A /* PCVisionPickerViewController.xib */; };
 		B9EDC728AA92C23716DDBCB54F3462A4 /* NextLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CBCD0ADA8EA0A90C59420D4EF6827 /* NextLevel.swift */; };
 		BA8A6DB260D59A830B818BD41D5D2E1E /* NextLevelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ADD19E475A7B4025ADCD2F7E56E256 /* NextLevelConfiguration.swift */; };
-		CA6E9F24658377CFA3F85389EB130C71 /* PCVisionPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD7D87E7A45BA036FD2FB31039F8E883 /* PCVisionPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5B24ED09321C7C810A5AFC2A7766665 /* PBJFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D666E664BFDA8ACD984D21AE782D30FA /* PBJFocusView.swift */; };
+		C9289263C646C5B3AB8E1EFD5D9C0963 /* PCVisionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877DE111792B790D288CA8231DF6720A /* PCVisionPickerViewController.swift */; };
 		CF8AD4510FA2B5CFADA488ED7A996E72 /* NextLevel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743761A4B3FE08133EF6B17BC7852EA /* NextLevel-dummy.m */; };
-		D5FA6696543D902C49362CB040EBD48A /* NextLevel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6991F8408B15A119EAECCB80F0C699 /* NextLevel.framework */; };
+		D12D8E95D132E1E3342155D512787872 /* PCVisionPickerPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B51215D99AC0400E9679E318C8C2C /* PCVisionPickerPreviewController.swift */; };
 		DAB37E7354A0CF09F218E1047A25369A /* NextLevel+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31056835EE6C12B6AE8A489F9AD3FD42 /* NextLevel+UIImage.swift */; };
+		DB67206FEFCBB4D20561BDF3FE22DAC7 /* PCVisionPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7CE5FAFCFF34EB4043BC4CFFC819E /* PCVisionPicker-dummy.m */; };
 		DB9F0D947E0E0D1E076C24E89498DABB /* NextLevel+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5973DBE4D9A757B53526A9ABD3E25B2 /* NextLevel+Metadata.swift */; };
 		E13C60F0463E7633577125AE281501AC /* NextLevelSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894861AE3CC2CEC8AD794FEA0B25353 /* NextLevelSession.swift */; };
-		F18F72EBA300923E2E5D96F4FA007B05 /* PCVisionPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABF256A97DE4C0D622F7B1A6B342122 /* PCVisionPicker-dummy.m */; };
-		FBF8B0885761D50BA467711AD7D5548C /* PCVisionPickerPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBE001C7E7F892585A445950B7C2D5B /* PCVisionPickerPreviewController.swift */; };
+		E487C2FD2C89493E9D703F9E7618A561 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A198393F5012A8FC07FBC299293A05E /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0E29B4E26ECF651621CDCA12F28124FA /* PBXContainerItemProxy */ = {
+		4CE44BE019027F6626A75576B763F4BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B36AEC81309F0FEDAE7D7985020CA31A;
+			remoteInfo = NextLevel;
+		};
+		6CF1CB0F04DDD9892F478CE73682E186 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -68,45 +75,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D7F5E6DB54C9DD8AC1C6481E67935DE /* Pods_PCVisionPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCVisionPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D7F5E6DB54C9DD8AC1C6481E67935DE /* Pods_PCVisionPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PCVisionPicker_Example.framework; path = "Pods-PCVisionPicker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D80649F07DF759FD8E389FECD633F73 /* NextLevel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NextLevel.debug.xcconfig; sourceTree = "<group>"; };
-		101C43C449C7FA402F1992F945123072 /* PCVisionPickerPreviewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PCVisionPickerPreviewController.xib; path = PCVisionPicker/Classes/Source/PCVisionPickerPreviewController.xib; sourceTree = "<group>"; };
+		115E610A468E3F2A1B833D943F530AA8 /* PCVisionPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PCVisionPicker-umbrella.h"; sourceTree = "<group>"; };
+		13F4EEFA28CCE4B67C59F99DEDA70FAF /* NextLevelExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelExtension.swift; path = PCVisionPicker/Classes/Source/NextLevelExtension.swift; sourceTree = "<group>"; };
 		1743761A4B3FE08133EF6B17BC7852EA /* NextLevel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NextLevel-dummy.m"; sourceTree = "<group>"; };
 		182819D512C5ABCFA9ABD69AC0905CAB /* NextLevelProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelProtocols.swift; path = Sources/NextLevelProtocols.swift; sourceTree = "<group>"; };
 		1CD2F850C43B99E242391BB4EA3B8B75 /* Pods-PCVisionPicker_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PCVisionPicker_Example-Info.plist"; sourceTree = "<group>"; };
+		1EDCE25D77BD83CF272226AE95792E59 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		223C68A83C737A57E5A50CFBF2F9652D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		225FA092DA1685B169939D767F876E67 /* Pods-PCVisionPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PCVisionPicker_Example.modulemap"; sourceTree = "<group>"; };
 		2368E916F3C66BB2FEFE0AAD20D4DB43 /* NextLevelGIFCreator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelGIFCreator.swift; path = Sources/NextLevelGIFCreator.swift; sourceTree = "<group>"; };
 		253AB6FB2458AF009FD23726DFC31C86 /* Pods-PCVisionPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PCVisionPicker_Example-umbrella.h"; sourceTree = "<group>"; };
-		286C5ABB094FBA13B40CABA2033CB6EA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2A16C01224E3D6CE0042D7AF /* NextLevelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NextLevelExtension.swift; path = PCVisionPicker/Classes/Source/NextLevelExtension.swift; sourceTree = "<group>"; };
-		2A3D149D1F7C6AB377BA24D3109F757C /* PCVisionPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PCVisionPicker-prefix.pch"; sourceTree = "<group>"; };
+		2E698A68D45F65991CC68E412A47214A /* PCVisionPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PCVisionPicker.debug.xcconfig; sourceTree = "<group>"; };
 		30ADD19E475A7B4025ADCD2F7E56E256 /* NextLevelConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelConfiguration.swift; path = Sources/NextLevelConfiguration.swift; sourceTree = "<group>"; };
 		31056835EE6C12B6AE8A489F9AD3FD42 /* NextLevel+UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+UIImage.swift"; path = "Sources/NextLevel+UIImage.swift"; sourceTree = "<group>"; };
-		38B316F5B04A2D6ED36B0C15960E1B7C /* PCVisionPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PCVisionPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B2BEF184CC9533637BE0B629AC4967C /* PCVisionImages.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = PCVisionImages.xcassets; path = PCVisionPicker/Assets/PCVisionImages.xcassets; sourceTree = "<group>"; };
-		3C187A3EB6F4A40672DCE10FFCA8D01E /* PCVisionPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PCVisionPicker.debug.xcconfig; sourceTree = "<group>"; };
+		38B316F5B04A2D6ED36B0C15960E1B7C /* PCVisionPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PCVisionPicker.framework; path = PCVisionPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB40BBA61DD6594A016B424BBB60827 /* PCVisionPickerPreviewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PCVisionPickerPreviewController.xib; path = PCVisionPicker/Classes/Source/PCVisionPickerPreviewController.xib; sourceTree = "<group>"; };
 		42F08DAA560B3667B67DC197F61B4EC3 /* NextLevel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NextLevel.modulemap; sourceTree = "<group>"; };
+		4364176F9A4C8633F79F2B96C1AD548F /* PCVisionPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PCVisionPicker.release.xcconfig; sourceTree = "<group>"; };
 		4843E5768F88374F14F68CF803B7AE7D /* NextLevelBufferRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelBufferRenderer.swift; path = Sources/NextLevelBufferRenderer.swift; sourceTree = "<group>"; };
 		490B0C90CAC4EAFA9C066A3EA2C1E519 /* NextLevel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NextLevel-umbrella.h"; sourceTree = "<group>"; };
-		4A3B72CB1591E3BB04051C1272F86025 /* PCVisionPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PCVisionPicker-Info.plist"; sourceTree = "<group>"; };
 		4BDAD1CB0A4B3D9BFA4738BD0C42E19B /* Pods-PCVisionPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PCVisionPicker.release.xcconfig"; sourceTree = "<group>"; };
-		521F52A88FFA8838047FEA76641977FC /* PCVisionPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCVisionPickerViewController.swift; path = PCVisionPicker/Classes/Source/PCVisionPickerViewController.swift; sourceTree = "<group>"; };
-		53321E1D13BE370E8FEA9720E5CEFE8F /* PCVisionPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PCVisionPicker.modulemap; sourceTree = "<group>"; };
+		55352D12CD7233E2FEFE192261BBB217 /* PCVisionPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PCVisionPicker.modulemap; sourceTree = "<group>"; };
+		558B51215D99AC0400E9679E318C8C2C /* PCVisionPickerPreviewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCVisionPickerPreviewController.swift; path = PCVisionPicker/Classes/Source/PCVisionPickerPreviewController.swift; sourceTree = "<group>"; };
 		56E0510370314970A4E5B5C55F7F1FF7 /* Pods-PCVisionPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PCVisionPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		589154D32F164D271E9CF4057359B13F /* NextLevel+AVFoundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+AVFoundation.swift"; path = "Sources/NextLevel+AVFoundation.swift"; sourceTree = "<group>"; };
-		62E42DF03A3151FFB9CE433249369F5D /* Pods_PCVisionPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCVisionPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		631C6B4A5A37E168B5AF2100BB229ADB /* PCVisionPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PCVisionPicker.release.xcconfig; sourceTree = "<group>"; };
+		62E42DF03A3151FFB9CE433249369F5D /* Pods_PCVisionPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PCVisionPicker.framework; path = "Pods-PCVisionPicker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6627F114C031F7111CEB946B2060FC6F /* NextLevel+CMSampleBuffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+CMSampleBuffer.swift"; path = "Sources/NextLevel+CMSampleBuffer.swift"; sourceTree = "<group>"; };
 		68F33AD2E1CCB382E737BA80DE763502 /* NextLevel+CIContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+CIContext.swift"; path = "Sources/NextLevel+CIContext.swift"; sourceTree = "<group>"; };
 		6A198393F5012A8FC07FBC299293A05E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		8A74088FFA41BC7EB71DE4404F0C290D /* PBJFocusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBJFocusView.swift; path = PCVisionPicker/Classes/Source/PBJFocusView.swift; sourceTree = "<group>"; };
+		6D024C70778217F7D916620C42DC40C7 /* PCVisionPicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PCVisionPicker.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6D4DE42F3532D22F7032CAF93025F28F /* PCVisionImages.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = PCVisionImages.xcassets; path = PCVisionPicker/Assets/PCVisionImages.xcassets; sourceTree = "<group>"; };
+		78D800563F669025D73D82F0849C8672 /* PCVisionPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PCVisionPicker-Info.plist"; sourceTree = "<group>"; };
+		877DE111792B790D288CA8231DF6720A /* PCVisionPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCVisionPickerViewController.swift; path = PCVisionPicker/Classes/Source/PCVisionPickerViewController.swift; sourceTree = "<group>"; };
 		8CDD55ABBDD02F2A62E9D7B75572B43E /* NextLevel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NextLevel-Info.plist"; sourceTree = "<group>"; };
-		9094C0BA4F654E29C39EFCB2AA7E0B53 /* PCVisionPicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PCVisionPicker.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		9AA5B435DB240F39122B3D5946559F97 /* Pods-PCVisionPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PCVisionPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9ABF256A97DE4C0D622F7B1A6B342122 /* PCVisionPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PCVisionPicker-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DD2AF89CF8D5CA47D6028E579D9F492 /* NextLevel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NextLevel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DF7DBD66EE94FF710D3F00DFBC9B92A /* SwiftProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftProgressHUD.swift; path = PCVisionPicker/Classes/Source/SwiftProgressHUD.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DD2AF89CF8D5CA47D6028E579D9F492 /* NextLevel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NextLevel.framework; path = NextLevel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1CBCD0ADA8EA0A90C59420D4EF6827 /* NextLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevel.swift; path = Sources/NextLevel.swift; sourceTree = "<group>"; };
 		A026DE7EAE9B0BD396A23C715C3FE6A4 /* Pods-PCVisionPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PCVisionPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A0B121EF5F5F77E618DAB1ADC4FBAC71 /* Pods-PCVisionPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PCVisionPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,33 +120,26 @@
 		B352709A7D797B8E168B342CCAD0BE7E /* Pods-PCVisionPicker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PCVisionPicker-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B52708CFAF74E6D679BD84A243AB318E /* NextLevelClip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelClip.swift; path = Sources/NextLevelClip.swift; sourceTree = "<group>"; };
 		B8009EF7314A635BB895177809C7EC51 /* Pods-PCVisionPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PCVisionPicker.debug.xcconfig"; sourceTree = "<group>"; };
-		BD7D87E7A45BA036FD2FB31039F8E883 /* PCVisionPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PCVisionPicker-umbrella.h"; sourceTree = "<group>"; };
+		BC1F204AD892A0187822483974F38197 /* PCVisionPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PCVisionPicker-prefix.pch"; sourceTree = "<group>"; };
 		C193A2E0B54C647CD9E6C01E55037561 /* Pods-PCVisionPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PCVisionPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C7ADD0F6551007FE375C0419BB23C0D7 /* Pods-PCVisionPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PCVisionPicker_Example-dummy.m"; sourceTree = "<group>"; };
+		C8F9EECF87F156670EA613DBC3C9F121 /* SwiftProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftProgressHUD.swift; path = PCVisionPicker/Classes/Source/SwiftProgressHUD.swift; sourceTree = "<group>"; };
 		CCA86EFDE3216E6DB4DF5AB7F169C391 /* NextLevel+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+Foundation.swift"; path = "Sources/NextLevel+Foundation.swift"; sourceTree = "<group>"; };
 		CE6991F8408B15A119EAECCB80F0C699 /* NextLevel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NextLevel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E77A51CB7D6D114F6C8E2FAF94372F /* NextLevel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NextLevel-prefix.pch"; sourceTree = "<group>"; };
+		D666E664BFDA8ACD984D21AE782D30FA /* PBJFocusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBJFocusView.swift; path = PCVisionPicker/Classes/Source/PBJFocusView.swift; sourceTree = "<group>"; };
 		D894861AE3CC2CEC8AD794FEA0B25353 /* NextLevelSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelSession.swift; path = Sources/NextLevelSession.swift; sourceTree = "<group>"; };
+		DC0B5F840D6FAEAB87E55053C0336DE5 /* PCVisionPickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PCVisionPickerViewController.xib; path = PCVisionPicker/Classes/Source/PCVisionPickerViewController.xib; sourceTree = "<group>"; };
 		DE9D5CC7851CD54AFC759E3D9298A041 /* Pods-PCVisionPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PCVisionPicker-dummy.m"; sourceTree = "<group>"; };
-		DF172F8C8E285ABE0BA2BE7C313716D4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E191A94C3C6D4535277A65905B36EBA0 /* Pods-PCVisionPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PCVisionPicker.modulemap"; sourceTree = "<group>"; };
-		E57E5266AF4437E266043659391CCA9A /* PCVisionPickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PCVisionPickerViewController.xib; path = PCVisionPicker/Classes/Source/PCVisionPickerViewController.xib; sourceTree = "<group>"; };
 		EC7CBC588D37689F1585A809CC055833 /* NextLevel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NextLevel.release.xcconfig; sourceTree = "<group>"; };
-		ECBE001C7E7F892585A445950B7C2D5B /* PCVisionPickerPreviewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCVisionPickerPreviewController.swift; path = PCVisionPicker/Classes/Source/PCVisionPickerPreviewController.swift; sourceTree = "<group>"; };
 		EDD7128A92EB9A8B2CE845E11C63D5DD /* Pods-PCVisionPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PCVisionPicker-umbrella.h"; sourceTree = "<group>"; };
 		EFBD660E38CD2FB34AEC8C643AEC5944 /* Pods-PCVisionPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PCVisionPicker-Info.plist"; sourceTree = "<group>"; };
 		F5973DBE4D9A757B53526A9ABD3E25B2 /* NextLevel+Metadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+Metadata.swift"; path = "Sources/NextLevel+Metadata.swift"; sourceTree = "<group>"; };
+		FDE7CE5FAFCFF34EB4043BC4CFFC819E /* PCVisionPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PCVisionPicker-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		030C30007F3F58C80404325C65988F0C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5994EF468A9DF130D428F99020BAFC45 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		185747E7E924DA338C40003C64614186 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,20 +148,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1CBFE777041426F5094F9886D8E94959 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B4E9A3CB66D3BEB1C501E1ADF1B210C /* Foundation.framework in Frameworks */,
-				D5FA6696543D902C49362CB040EBD48A /* NextLevel.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8F21E479CB34D89B41DBF2AD6A640E6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5160D706EA69759ED3263B0D8EB70F1B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8497AB438CA90643D2F057A3245546C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E487C2FD2C89493E9D703F9E7618A561 /* Foundation.framework in Frameworks */,
+				717163D44B1642D4D7F7EA0FFD21775D /* NextLevel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1859DF06A8E2B8C50AD6FC087D7ADE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A856302420CA7113BAD93A79574D3F84 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,12 +184,45 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		27A374E06FF064B71715C31D770FF3EC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				55352D12CD7233E2FEFE192261BBB217 /* PCVisionPicker.modulemap */,
+				FDE7CE5FAFCFF34EB4043BC4CFFC819E /* PCVisionPicker-dummy.m */,
+				78D800563F669025D73D82F0849C8672 /* PCVisionPicker-Info.plist */,
+				BC1F204AD892A0187822483974F38197 /* PCVisionPicker-prefix.pch */,
+				115E610A468E3F2A1B833D943F530AA8 /* PCVisionPicker-umbrella.h */,
+				2E698A68D45F65991CC68E412A47214A /* PCVisionPicker.debug.xcconfig */,
+				4364176F9A4C8633F79F2B96C1AD548F /* PCVisionPicker.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PCVisionPicker";
+			sourceTree = "<group>";
+		};
 		3751A7118F98BC10EF0604D54196A1C7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				56797638439BAF52207A7638D773B7F6 /* NextLevel */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3B7F0B12B898835CCAE306F57564221A /* PCVisionPicker */ = {
+			isa = PBXGroup;
+			children = (
+				13F4EEFA28CCE4B67C59F99DEDA70FAF /* NextLevelExtension.swift */,
+				D666E664BFDA8ACD984D21AE782D30FA /* PBJFocusView.swift */,
+				558B51215D99AC0400E9679E318C8C2C /* PCVisionPickerPreviewController.swift */,
+				3AB40BBA61DD6594A016B424BBB60827 /* PCVisionPickerPreviewController.xib */,
+				877DE111792B790D288CA8231DF6720A /* PCVisionPickerViewController.swift */,
+				DC0B5F840D6FAEAB87E55053C0336DE5 /* PCVisionPickerViewController.xib */,
+				C8F9EECF87F156670EA613DBC3C9F121 /* SwiftProgressHUD.swift */,
+				6632C77B2E80C08D93863D2807FC6247 /* Pod */,
+				F1E8DFE0E8CEC050F77A5CACBADA4D85 /* Resources */,
+				27A374E06FF064B71715C31D770FF3EC /* Support Files */,
+			);
+			name = PCVisionPicker;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		45ED70970CCD5D71274B7702966167FD /* Support Files */ = {
@@ -198,24 +238,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/NextLevel";
-			sourceTree = "<group>";
-		};
-		4FE6D33A952DF63EB1A2DAAD0FC90F5F /* PCVisionPicker */ = {
-			isa = PBXGroup;
-			children = (
-				2A16C01224E3D6CE0042D7AF /* NextLevelExtension.swift */,
-				8A74088FFA41BC7EB71DE4404F0C290D /* PBJFocusView.swift */,
-				ECBE001C7E7F892585A445950B7C2D5B /* PCVisionPickerPreviewController.swift */,
-				101C43C449C7FA402F1992F945123072 /* PCVisionPickerPreviewController.xib */,
-				521F52A88FFA8838047FEA76641977FC /* PCVisionPickerViewController.swift */,
-				E57E5266AF4437E266043659391CCA9A /* PCVisionPickerViewController.xib */,
-				9DF7DBD66EE94FF710D3F00DFBC9B92A /* SwiftProgressHUD.swift */,
-				F97FA838E75FBC6FE722F323E4317643 /* Pod */,
-				8FA9D6A8B68DA4E85F1CC326003650C8 /* Resources */,
-				EB5728F7E4D3C067BCD6957E4392EFCC /* Support Files */,
-			);
-			name = PCVisionPicker;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		56797638439BAF52207A7638D773B7F6 /* NextLevel */ = {
@@ -236,15 +258,18 @@
 				D894861AE3CC2CEC8AD794FEA0B25353 /* NextLevelSession.swift */,
 				45ED70970CCD5D71274B7702966167FD /* Support Files */,
 			);
+			name = NextLevel;
 			path = NextLevel;
 			sourceTree = "<group>";
 		};
-		675C4E5140276D7F4E021E6424AC83EE /* Development Pods */ = {
+		6632C77B2E80C08D93863D2807FC6247 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				4FE6D33A952DF63EB1A2DAAD0FC90F5F /* PCVisionPicker */,
+				223C68A83C737A57E5A50CFBF2F9652D /* LICENSE */,
+				6D024C70778217F7D916620C42DC40C7 /* PCVisionPicker.podspec */,
+				1EDCE25D77BD83CF272226AE95792E59 /* README.md */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		69377AFF839669BA3D573FA141ED623A /* Frameworks */ = {
@@ -282,39 +307,24 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8FA9D6A8B68DA4E85F1CC326003650C8 /* Resources */ = {
+		9924663D75B21B2D2C843A23F292ACA0 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B2BEF184CC9533637BE0B629AC4967C /* PCVisionImages.xcassets */,
+				3B7F0B12B898835CCAE306F57564221A /* PCVisionPicker */,
 			);
-			name = Resources;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				675C4E5140276D7F4E021E6424AC83EE /* Development Pods */,
+				9924663D75B21B2D2C843A23F292ACA0 /* Development Pods */,
 				69377AFF839669BA3D573FA141ED623A /* Frameworks */,
 				3751A7118F98BC10EF0604D54196A1C7 /* Pods */,
 				F24BC77113F9F9959CD982FDFBD1C0CA /* Products */,
 				80B3377AB23F3E1F0CBE05EE269BC9D0 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		EB5728F7E4D3C067BCD6957E4392EFCC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				53321E1D13BE370E8FEA9720E5CEFE8F /* PCVisionPicker.modulemap */,
-				9ABF256A97DE4C0D622F7B1A6B342122 /* PCVisionPicker-dummy.m */,
-				4A3B72CB1591E3BB04051C1272F86025 /* PCVisionPicker-Info.plist */,
-				2A3D149D1F7C6AB377BA24D3109F757C /* PCVisionPicker-prefix.pch */,
-				BD7D87E7A45BA036FD2FB31039F8E883 /* PCVisionPicker-umbrella.h */,
-				3C187A3EB6F4A40672DCE10FFCA8D01E /* PCVisionPicker.debug.xcconfig */,
-				631C6B4A5A37E168B5AF2100BB229ADB /* PCVisionPicker.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/PCVisionPicker";
 			sourceTree = "<group>";
 		};
 		ED498A715FD411E6F97B68D41B9D838F /* Pods-PCVisionPicker */ = {
@@ -333,6 +343,14 @@
 			path = "Target Support Files/Pods-PCVisionPicker";
 			sourceTree = "<group>";
 		};
+		F1E8DFE0E8CEC050F77A5CACBADA4D85 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6D4DE42F3532D22F7032CAF93025F28F /* PCVisionImages.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		F24BC77113F9F9959CD982FDFBD1C0CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,16 +360,6 @@
 				0D7F5E6DB54C9DD8AC1C6481E67935DE /* Pods_PCVisionPicker_Example.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F97FA838E75FBC6FE722F323E4317643 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				DF172F8C8E285ABE0BA2BE7C313716D4 /* LICENSE */,
-				9094C0BA4F654E29C39EFCB2AA7E0B53 /* PCVisionPicker.podspec */,
-				286C5ABB094FBA13B40CABA2033CB6EA /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,11 +373,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D2B01D78DBB7C44DA03407E9B9EAB55 /* Headers */ = {
+		34F3D569CF9821C4182AEFA039F8D2DC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A723949B5B938678E2F0702AAC1254A /* Pods-PCVisionPicker-umbrella.h in Headers */,
+				36FA1BE729A96E10894B6727C1EDD448 /* PCVisionPicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,11 +389,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A593EBB69B529B596B09ECD5E9767757 /* Headers */ = {
+		9E8C628445D38685C623991D6B93A5A0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA6E9F24658377CFA3F85389EB130C71 /* PCVisionPicker-umbrella.h in Headers */,
+				8E4996F0FC846D7E84A347A511F438FD /* Pods-PCVisionPicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,16 +402,17 @@
 /* Begin PBXNativeTarget section */
 		7DB054AC9F156A7E93614250CEDB0D0C /* Pods-PCVisionPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB80FCAF72EB5A09308E3B19781280C0 /* Build configuration list for PBXNativeTarget "Pods-PCVisionPicker" */;
+			buildConfigurationList = EF93492A1BF8D3C8081019AF44A5613B /* Build configuration list for PBXNativeTarget "Pods-PCVisionPicker" */;
 			buildPhases = (
-				3D2B01D78DBB7C44DA03407E9B9EAB55 /* Headers */,
-				6CDD3585BC61A2B36B3201F2461CBD51 /* Sources */,
-				030C30007F3F58C80404325C65988F0C /* Frameworks */,
-				44570529A627867DE761172E3C1401A5 /* Resources */,
+				9E8C628445D38685C623991D6B93A5A0 /* Headers */,
+				4D3A9EFC43BA93BF93FB21BC96F26BD6 /* Sources */,
+				B1859DF06A8E2B8C50AD6FC087D7ADE4 /* Frameworks */,
+				A4814882A9E80F7EA58B882FC35BBBC7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F93A4028FBBFBC111726AA7C5D17CD97 /* PBXTargetDependency */,
 			);
 			name = "Pods-PCVisionPicker";
 			productName = "Pods-PCVisionPicker";
@@ -450,17 +459,17 @@
 		};
 		FC232AE6C08BA6F844E5DB319D1318B4 /* PCVisionPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DEB14F0428128B2CFF8FCACC4BC4AF8A /* Build configuration list for PBXNativeTarget "PCVisionPicker" */;
+			buildConfigurationList = 894880962A5C45ECDEBB8D8D29220747 /* Build configuration list for PBXNativeTarget "PCVisionPicker" */;
 			buildPhases = (
-				A593EBB69B529B596B09ECD5E9767757 /* Headers */,
-				20265DC04A8C2BA769AE496C467E3CAD /* Sources */,
-				1CBFE777041426F5094F9886D8E94959 /* Frameworks */,
-				A493AEB9A93ED3F7AD899AF39467B95A /* Resources */,
+				34F3D569CF9821C4182AEFA039F8D2DC /* Headers */,
+				83375259D3BB3893BC4036CC2E0C2D79 /* Sources */,
+				A8497AB438CA90643D2F057A3245546C /* Frameworks */,
+				8AA8F51DFDD5BBE0831BE5F46D8F5A50 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DE610FBA78F879AC3D5EC71F4F1FC0C7 /* PBXTargetDependency */,
+				FA1B1713216F3124E824716298F21D48 /* PBXTargetDependency */,
 			);
 			name = PCVisionPicker;
 			productName = PCVisionPicker;
@@ -512,39 +521,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		44570529A627867DE761172E3C1401A5 /* Resources */ = {
+		8AA8F51DFDD5BBE0831BE5F46D8F5A50 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A612DD3111C7D7EB404C0D5EC78C736B /* PCVisionImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A493AEB9A93ED3F7AD899AF39467B95A /* Resources */ = {
+		A4814882A9E80F7EA58B882FC35BBBC7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224CF31D7430B08BDD6C13F94AE97D7A /* PCVisionImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		20265DC04A8C2BA769AE496C467E3CAD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				262D765AE7EB47EC5DDB4518116C29E2 /* PBJFocusView.swift in Sources */,
-				F18F72EBA300923E2E5D96F4FA007B05 /* PCVisionPicker-dummy.m in Sources */,
-				FBF8B0885761D50BA467711AD7D5548C /* PCVisionPickerPreviewController.swift in Sources */,
-				AD7CBB1F54CECDF929BF78C43495AC4E /* PCVisionPickerPreviewController.xib in Sources */,
-				3456B8FB354E919111C8C5AC3690C0A5 /* PCVisionPickerViewController.swift in Sources */,
-				B1929A3A287CC9BA0C3984D41D7BEC94 /* PCVisionPickerViewController.xib in Sources */,
-				937E6A9513F92418F1EDB20EAD38FA52 /* SwiftProgressHUD.swift in Sources */,
-				2A16C01324E3D6CE0042D7AF /* NextLevelExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		237346671C220D0272E08A361EE5711C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -553,11 +547,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6CDD3585BC61A2B36B3201F2461CBD51 /* Sources */ = {
+		4D3A9EFC43BA93BF93FB21BC96F26BD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				405A22F0FA3602A7E5F68DBAEE99895C /* Pods-PCVisionPicker-dummy.m in Sources */,
+				568452997F25264C646F5C696E94E3C7 /* Pods-PCVisionPicker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83375259D3BB3893BC4036CC2E0C2D79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				752ECBECC38587A39EA6634CC604A4C7 /* NextLevelExtension.swift in Sources */,
+				C5B24ED09321C7C810A5AFC2A7766665 /* PBJFocusView.swift in Sources */,
+				DB67206FEFCBB4D20561BDF3FE22DAC7 /* PCVisionPicker-dummy.m in Sources */,
+				D12D8E95D132E1E3342155D512787872 /* PCVisionPickerPreviewController.swift in Sources */,
+				7295ADB146183A8F1873478C831B7073 /* PCVisionPickerPreviewController.xib in Sources */,
+				C9289263C646C5B3AB8E1EFD5D9C0963 /* PCVisionPickerViewController.swift in Sources */,
+				8DDE37E63B59554C39BA3D751A280C7B /* PCVisionPickerViewController.xib in Sources */,
+				5BC59FAF0A7977DEC3A89E2260B34516 /* SwiftProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,15 +606,90 @@
 			target = FC232AE6C08BA6F844E5DB319D1318B4 /* PCVisionPicker */;
 			targetProxy = D092D87398CE7FEE950EB40F5BF39676 /* PBXContainerItemProxy */;
 		};
-		DE610FBA78F879AC3D5EC71F4F1FC0C7 /* PBXTargetDependency */ = {
+		F93A4028FBBFBC111726AA7C5D17CD97 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NextLevel;
 			target = B36AEC81309F0FEDAE7D7985020CA31A /* NextLevel */;
-			targetProxy = 0E29B4E26ECF651621CDCA12F28124FA /* PBXContainerItemProxy */;
+			targetProxy = 6CF1CB0F04DDD9892F478CE73682E186 /* PBXContainerItemProxy */;
+		};
+		FA1B1713216F3124E824716298F21D48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NextLevel;
+			target = B36AEC81309F0FEDAE7D7985020CA31A /* NextLevel */;
+			targetProxy = 4CE44BE019027F6626A75576B763F4BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0C95E817907D11E8B7F4D8D98591E47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BDAD1CB0A4B3D9BFA4738BD0C42E19B /* Pods-PCVisionPicker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PCVisionPicker/Pods-PCVisionPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PCVisionPicker/Pods-PCVisionPicker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1967A377C4928223EFEA7527BC13B054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8009EF7314A635BB895177809C7EC51 /* Pods-PCVisionPicker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PCVisionPicker/Pods-PCVisionPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PCVisionPicker/Pods-PCVisionPicker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		196DFA3E4A09A28224918543529A1885 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -703,6 +787,71 @@
 			};
 			name = Release;
 		};
+		55805E4C49A08927F1180BE16CE5BEF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4364176F9A4C8633F79F2B96C1AD548F /* PCVisionPicker.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PCVisionPicker/PCVisionPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PCVisionPicker/PCVisionPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PCVisionPicker/PCVisionPicker.modulemap";
+				PRODUCT_MODULE_NAME = PCVisionPicker;
+				PRODUCT_NAME = PCVisionPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7C0F8A50FCE4AD24BAF5C7C74790DBFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E698A68D45F65991CC68E412A47214A /* PCVisionPicker.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PCVisionPicker/PCVisionPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PCVisionPicker/PCVisionPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PCVisionPicker/PCVisionPicker.modulemap";
+				PRODUCT_MODULE_NAME = PCVisionPicker;
+				PRODUCT_NAME = PCVisionPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		97758A397D200419318464A545297B59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D80649F07DF759FD8E389FECD633F73 /* NextLevel.debug.xcconfig */;
@@ -770,38 +919,6 @@
 			};
 			name = Release;
 		};
-		AC86661C93008D30A33AAD78E305032E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C187A3EB6F4A40672DCE10FFCA8D01E /* PCVisionPicker.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PCVisionPicker/PCVisionPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PCVisionPicker/PCVisionPicker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PCVisionPicker/PCVisionPicker.modulemap";
-				PRODUCT_MODULE_NAME = PCVisionPicker;
-				PRODUCT_NAME = PCVisionPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -855,111 +972,10 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		D1DCC7DC7733C0B5400FB847135330DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BDAD1CB0A4B3D9BFA4738BD0C42E19B /* Pods-PCVisionPicker.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PCVisionPicker/Pods-PCVisionPicker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PCVisionPicker/Pods-PCVisionPicker.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D9A56590F71B477FDE4186C503C1F172 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8009EF7314A635BB895177809C7EC51 /* Pods-PCVisionPicker.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PCVisionPicker/Pods-PCVisionPicker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PCVisionPicker/Pods-PCVisionPicker.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F5303F1C86B6EDFB4414D7EE39BA1187 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 631C6B4A5A37E168B5AF2100BB229ADB /* PCVisionPicker.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PCVisionPicker/PCVisionPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PCVisionPicker/PCVisionPicker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PCVisionPicker/PCVisionPicker.modulemap";
-				PRODUCT_MODULE_NAME = PCVisionPicker;
-				PRODUCT_NAME = PCVisionPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1027,20 +1043,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DEB14F0428128B2CFF8FCACC4BC4AF8A /* Build configuration list for PBXNativeTarget "PCVisionPicker" */ = {
+		894880962A5C45ECDEBB8D8D29220747 /* Build configuration list for PBXNativeTarget "PCVisionPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC86661C93008D30A33AAD78E305032E /* Debug */,
-				F5303F1C86B6EDFB4414D7EE39BA1187 /* Release */,
+				7C0F8A50FCE4AD24BAF5C7C74790DBFB /* Debug */,
+				55805E4C49A08927F1180BE16CE5BEF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB80FCAF72EB5A09308E3B19781280C0 /* Build configuration list for PBXNativeTarget "Pods-PCVisionPicker" */ = {
+		EF93492A1BF8D3C8081019AF44A5613B /* Build configuration list for PBXNativeTarget "Pods-PCVisionPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D9A56590F71B477FDE4186C503C1F172 /* Debug */,
-				D1DCC7DC7733C0B5400FB847135330DC /* Release */,
+				1967A377C4928223EFEA7527BC13B054 /* Debug */,
+				0C95E817907D11E8B7F4D8D98591E47E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

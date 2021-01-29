@@ -23,9 +23,11 @@
     "PCVisionPicker/Classes/Resource/*.xib",
     "PCVisionPicker/Assets/PCVisionImages.xcassets"
   ],
+  "swift_versions": "5.0",
   "dependencies": {
     "NextLevel": [
-      "~> 0.16.3"
+      "~> 0.16.4.JJ"
     ]
-  }
+  },
+  "swift_version": "5.0"
 }

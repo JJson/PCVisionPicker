@@ -6,6 +6,6 @@ target 'PCVisionPicker_Example' do
 
 end
 target 'PCVisionPicker' do
-#    pod 'PBJVision', :git => 'https://github.com/JJson/PBJVision.git'
+    pod 'NextLevel', :git => 'https://github.com/JJson/NextLevel.git', :tag => '0.16.4.JJ'
 end
 

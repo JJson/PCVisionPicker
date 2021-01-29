@@ -571,7 +571,8 @@ extension NextLevelSession {
                                     let url = writer.outputURL
                                     let error = writer.error
                                     
-                                    if error == nil {
+                                    let nsError = error as? NSError
+                                    if error == nil || (nsError != nil && nsError!.code == -11847) {
                                         clip = NextLevelClip(url: url, infoDict: nil)
                                         if let clip = clip {
                                             self.add(clip: clip)

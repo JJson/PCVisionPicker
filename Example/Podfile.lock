@@ -1,23 +1,28 @@
 PODS:
-  - NextLevel (0.16.3)
+  - NextLevel (0.16.4)
   - PCVisionPicker (1.1):
-    - NextLevel (~> 0.16.3)
+    - NextLevel (~> 0.16.4.JJ)
 
 DEPENDENCIES:
+  - NextLevel (from `https://github.com/JJson/NextLevel.git`, tag `0.16.4.JJ`)
   - PCVisionPicker (from `../`)
 
-SPEC REPOS:
-  trunk:
-    - NextLevel
-
 EXTERNAL SOURCES:
+  NextLevel:
+    :git: https://github.com/JJson/NextLevel.git
+    :tag: 0.16.4.JJ
   PCVisionPicker:
     :path: "../"
 
-SPEC CHECKSUMS:
-  NextLevel: 76dab336f758e6a98ef6b4917de1481324cffe04
-  PCVisionPicker: 8c1b2a9e06f56526ef6e807d4f1af247c63ab09c
+CHECKOUT OPTIONS:
+  NextLevel:
+    :git: https://github.com/JJson/NextLevel.git
+    :tag: 0.16.4.JJ
 
-PODFILE CHECKSUM: b509b66895b993e0a3bc1bd46acca19aee13cabd
+SPEC CHECKSUMS:
+  NextLevel: f84ecba5c546a87e245809e0523ef3a24897323b
+  PCVisionPicker: f5e930b30d62778f6fb6a67da46a8d12cebc91ef
+
+PODFILE CHECKSUM: 653d8abdfe69a0a34b58b4764bb48efaa6b13835
 
 COCOAPODS: 1.9.1

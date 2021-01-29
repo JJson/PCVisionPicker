@@ -38,5 +38,6 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'NextLevel', '~> 0.16.3'
+  s.swift_version = '5.0'
+  s.dependency 'NextLevel', '~> 0.16.4.JJ'
 end
