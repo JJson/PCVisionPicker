@@ -25,6 +25,13 @@ class ViewController: UIViewController {
         ctr.cameraMode = .video
         ctr.skipPreview = true
 //        ctr.maxDuration = 5
+        
+        ctr.handleForSpaceListner = { (space) in
+            print("space: \(space)")
+            if space < 80 * 1024 * 1024 {
+                ctr.stopVideoCapture()
+            }
+        }
         ctr.handleDone = {image,videoUrl in
             if image != nil {
                 let path = NSHomeDirectory() + "/Documents/image.jpg"

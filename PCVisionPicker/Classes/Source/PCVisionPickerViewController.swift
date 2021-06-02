@@ -112,6 +112,7 @@ public class PCVisionPickerViewController: UIViewController {
     }
     
     public var handleDone:((UIImage?,URL?)->(Void))?
+    public var handleForSpaceListner:((Int64)->Void)?
     
     public var skipPreview = false
     
@@ -269,6 +270,9 @@ public class PCVisionPickerViewController: UIViewController {
     
     override public func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        if nextLevel.isRecording {
+            nextLevel.pause()
+        }
         nextLevel.stop()
     }
     
@@ -296,6 +300,27 @@ public class PCVisionPickerViewController: UIViewController {
         NextLevel.shared.previewLayer.frame = previewView.bounds
         NextLevel.shared.previewLayer.videoGravity = .resizeAspectFill
         previewView.layer.addSublayer(NextLevel.shared.previewLayer)
+    }
+    
+    func diskSpaceFree() -> Int64? {
+        
+        if #available(iOS 11.0, *) {
+            let fileURL = URL(fileURLWithPath: NSHomeDirectory() as String)
+            do {
+                let values = try fileURL.resourceValues(forKeys: [.volumeAvailableCapacityForImportantUsageKey])
+                return values.volumeAvailableCapacityForImportantUsage
+            } catch {
+                print("Error retrieving capacity: \(error.localizedDescription)")
+            }
+        } else {
+            // Fallback on earlier versions
+            if let attrs = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()),
+                let freeSize = attrs[.systemFreeSize] as? NSNumber {
+                    return freeSize.int64Value
+            }
+        }
+
+        return nil
     }
     
     func resetCapture() {
@@ -612,6 +637,10 @@ extension PCVisionPickerViewController: NextLevelVideoDelegate {
         let minute = Int((seconds / 60).truncatingRemainder(dividingBy: 60))
         let second = Int(seconds.truncatingRemainder(dividingBy: 60))
         lbTime.text = String(format: "%02d:%02d:%02d", hour,minute,second)
+        if let space = diskSpaceFree(), touchEnable {
+            handleForSpaceListner?(space)
+        }
+        
     }
     
     public func nextLevel(_ nextLevel: NextLevel, didAppendAudioSampleBuffer sampleBuffer: CMSampleBuffer, inSession session: NextLevelSession) {
