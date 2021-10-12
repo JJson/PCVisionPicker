@@ -298,15 +298,17 @@ public class PCVisionPickerViewController: UIViewController {
                 }
                 group.leave()
             }
-            group.enter()
-            NextLevel.requestAuthorization(forMediaType: .audio) {[weak self] (_, status) in
-                guard let strongSelf = self else { return }
-                if status == .notAuthorized {
-                    
-                } else {
-                    strongSelf.micAuthReady = true
+            if cameraMode != .photo {
+                group.enter()
+                NextLevel.requestAuthorization(forMediaType: .audio) {[weak self] (_, status) in
+                    guard let strongSelf = self else { return }
+                    if status == .notAuthorized {
+                        
+                    } else {
+                        strongSelf.micAuthReady = true
+                    }
+                    group.leave()
                 }
-                group.leave()
             }
             
             group.notify(queue: .main) { [weak self] in
