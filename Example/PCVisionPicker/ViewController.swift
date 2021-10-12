@@ -32,18 +32,24 @@ class ViewController: UIViewController {
                 ctr.stopVideoCapture()
             }
         }
+        
+        ctr.showDarkScreen = true
+        
         ctr.handleDone = {image,videoUrl in
             if image != nil {
                 let path = NSHomeDirectory() + "/Documents/image.jpg"
                 let imageData = image!.jpegData(compressionQuality: 1)
                 try? imageData?.write(to: URL(fileURLWithPath: path))
             }
-            if videoUrl != nil {
-                let path = NSHomeDirectory() + "/Documents/video\(arc4random()%100000).mp4"
+            if let url = videoUrl,
+               let suffix = url.path.components(separatedBy: ".").last {
+                
+                let path = NSHomeDirectory() + "/Documents/video\(arc4random()%100000).\(suffix)"
                 try? FileManager.default.moveItem(at: videoUrl!, to: URL(fileURLWithPath: path))
             }
         }
         let navCtr = UINavigationController(rootViewController: ctr)
+        navCtr.modalPresentationStyle = .fullScreen
         present(navCtr, animated: true) {
             
         }

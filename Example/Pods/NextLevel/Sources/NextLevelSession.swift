@@ -313,7 +313,7 @@ extension NextLevelSession {
         do {
             self._writer = try AVAssetWriter(url: url, fileType: self.fileType)
             if let writer = self._writer {
-                writer.shouldOptimizeForNetworkUse = true
+                writer.shouldOptimizeForNetworkUse = false
                 writer.metadata = NextLevel.assetWriterMetadata()
                 
                 if let videoInput = self._videoInput {
@@ -731,7 +731,7 @@ extension NextLevelSession {
                     self.removeFile(fileUrl: exportURL)
                     
                     if let exportSession = AVAssetExportSession(asset: exportAsset, presetName: preset) {
-                        exportSession.shouldOptimizeForNetworkUse = true
+                        exportSession.shouldOptimizeForNetworkUse = false
                         exportSession.outputURL = exportURL
                         exportSession.outputFileType = self.fileType
                         exportSession.exportAsynchronously {

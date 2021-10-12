@@ -12,6 +12,7 @@ import CoreMedia
 import ImageIO
 import AVFoundation
 import Photos
+import MediaPlayer
 
 public enum PCVisionPickerMode {
     case photo
@@ -112,11 +113,14 @@ public class PCVisionPickerViewController: UIViewController {
     }
     
     public var handleDone:((UIImage?,URL?)->(Void))?
+    /// 存储空间监听
     public var handleForSpaceListner:((Int64)->Void)?
-    
+    /// 是否跳过预览视图
     public var skipPreview = false
-    
+    /// 最大时长
     public var maxDuration = -1
+    /// 是否显示黑屏开关
+    public var showDarkScreen = false
     
     let focusView = PBJFocusView(frame: CGRect.zero)
     @IBOutlet weak var lbTimeTopConstraint: NSLayoutConstraint!
@@ -126,6 +130,7 @@ public class PCVisionPickerViewController: UIViewController {
     @IBOutlet weak var lbTime: UILabel!
     @IBOutlet weak var btLight: UIButton!
     @IBOutlet weak var btStart: UIButton!
+    @IBOutlet weak var btDarkScreen: UIButton!
     @IBOutlet weak var btSwitch: UIButton!
     
     fileprivate let orginIdleTimerDisabled = UIApplication.shared.isIdleTimerDisabled
@@ -134,6 +139,44 @@ public class PCVisionPickerViewController: UIViewController {
     
     fileprivate var camaraAuthReady = false
     fileprivate var micAuthReady = false
+    
+    fileprivate var orginBrightness = UIScreen.main.brightness
+    fileprivate var timerForDarkScreen: Timer?
+    
+    fileprivate lazy var blackView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        return view
+    }()
+    
+    fileprivate var bDarkScreen: Bool = false {
+        didSet {
+            guard bDarkScreen != oldValue else {return}
+            if bDarkScreen {
+                orginBrightness = UIScreen.main.brightness
+                
+                if let window = UIApplication.shared.keyWindow {
+                    blackView.frame = window.bounds
+                    window.addSubview(blackView)
+                }
+                
+                timerForDarkScreen = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true, block: { _ in
+                    if UIScreen.main.brightness > 0.01 {
+                        UIScreen.main.brightness = 0.01
+                        UIScreen.main.brightness = 0
+                    }
+                    
+                })
+            } else {
+                timerForDarkScreen?.invalidate()
+                UIScreen.main.brightness = 0.02
+                UIScreen.main.brightness = orginBrightness
+                blackView.removeFromSuperview()
+            }
+        }
+    }
+    
+    internal var volumeValueObservation: NSKeyValueObservation?
     
     public override var prefersStatusBarHidden: Bool {
         get {
@@ -144,17 +187,44 @@ public class PCVisionPickerViewController: UIViewController {
         super.viewDidLoad()
         if cameraMode == .photo {
             lbTime.isHidden = true
+            showDarkScreen = false
+            
         }
         else {
             lbTime.isHidden = false
         }
+        btDarkScreen.isHidden = !showDarkScreen
+        if showDarkScreen {
+            flashMode = .off
+        }
         // Do any additional setup after loading the view.
-
         nextLevel.delegate = self
         nextLevel.deviceDelegate = self
         nextLevel.flashDelegate = self
         nextLevel.videoDelegate = self
         nextLevel.photoDelegate = self
+        if showDarkScreen {
+            do {
+                let audioSession = AVAudioSession.sharedInstance()
+                
+                try audioSession.setActive(true) // <- Important
+                
+                volumeValueObservation = audioSession.observe(\.outputVolume) { [weak self] (av, _) in
+                    guard let strongSelf = self else { return }
+                    strongSelf.bDarkScreen = false
+                }
+            } catch {}
+        }
+        
+        if #available(iOS 11.0, *) {
+            setNeedsUpdateOfHomeIndicatorAutoHidden()
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        let mpVolumeView = MPVolumeView()
+        mpVolumeView.frame = CGRect(x: -500, y: -500, width: 10, height: 10)
+        view.addSubview(mpVolumeView)
     }
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: Bundle(for: PCVisionPickerViewController.self))
@@ -186,6 +256,12 @@ public class PCVisionPickerViewController: UIViewController {
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    public override var prefersHomeIndicatorAutoHidden: Bool {
+        get {
+            return true
+        }
     }
     
     override public func viewWillAppear(_ animated: Bool) {
@@ -462,6 +538,10 @@ public class PCVisionPickerViewController: UIViewController {
             
         }
     }
+    @IBAction func darkScreenAction(_ sender: Any) {
+        bDarkScreen = true
+    }
+    
     
     
     @IBAction func handleFocusTapGesterRecognizer(gestureRecognizer:UIGestureRecognizer) {
@@ -499,7 +579,9 @@ extension PCVisionPickerViewController: NextLevelDelegate {
     }
     
     public func nextLevelSessionWasInterrupted(_ nextLevel: NextLevel) {
-        
+        if recording    {
+            stopVideoCapture()
+        }
     }
     
     public func nextLevelSessionInterruptionEnded(_ nextLevel: NextLevel) {

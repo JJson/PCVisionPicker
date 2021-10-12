@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PCVisionPickerViewController" customModule="PCVisionPicker" customModuleProvider="target">
             <connections>
                 <outlet property="bottomConstraint" destination="fw3-4s-aQy" id="oQA-7Z-mxs"/>
+                <outlet property="btDarkScreen" destination="QRz-Bs-cG4" id="cA1-TZ-Z7t"/>
                 <outlet property="btLight" destination="uyD-5M-VUe" id="acX-hN-3Al"/>
                 <outlet property="btStart" destination="VGT-u0-JKs" id="Vk7-tx-UQQ"/>
                 <outlet property="btSwitch" destination="W3G-63-vAe" id="huZ-hh-WRF"/>
@@ -28,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7h-GR-OsW">
-                    <rect key="frame" x="151" y="15" width="71.5" height="21"/>
+                    <rect key="frame" x="152" y="15" width="71" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -62,8 +61,8 @@
                                 <action selector="switchFlashModeAction:" destination="-1" eventType="touchUpInside" id="Drq-7H-Qi4"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGT-u0-JKs">
-                            <rect key="frame" x="157" y="10" width="60" height="60"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGT-u0-JKs">
+                            <rect key="frame" x="157.5" y="10" width="60" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="480-Mj-CB7"/>
                                 <constraint firstAttribute="height" constant="60" id="MyX-Ez-IUR"/>
@@ -103,7 +102,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dg-kO-Klr">
-                    <rect key="frame" x="309" y="3" width="46" height="46"/>
+                    <rect key="frame" x="20" y="2.5" width="46" height="46"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="Urh-Dz-krK"/>
                         <constraint firstAttribute="width" constant="46" id="fUR-OS-Kz9"/>
@@ -113,15 +112,28 @@
                         <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="PcM-Rm-q4B"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRz-Bs-cG4">
+                    <rect key="frame" x="309" y="2.5" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="2Tp-Gl-jsn"/>
+                        <constraint firstAttribute="height" constant="46" id="N8h-FY-aoc"/>
+                    </constraints>
+                    <state key="normal" image="dark_screen"/>
+                    <connections>
+                        <action selector="darkScreenAction:" destination="-1" eventType="touchUpInside" id="Yaj-8f-wUH"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="2dg-kO-Klr" firstAttribute="centerY" secondItem="g7h-GR-OsW" secondAttribute="centerY" id="9Vc-oj-5RS"/>
-                <constraint firstAttribute="trailing" secondItem="2dg-kO-Klr" secondAttribute="trailing" constant="20" id="MhQ-rk-NdL"/>
+                <constraint firstItem="2dg-kO-Klr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="HxN-RB-InD"/>
                 <constraint firstItem="RLD-ts-hjj" firstAttribute="top" secondItem="S0O-Hc-boP" secondAttribute="bottom" id="O0A-cB-Bbf"/>
                 <constraint firstItem="g7h-GR-OsW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="ROt-uw-hDH"/>
                 <constraint firstAttribute="trailing" secondItem="RLD-ts-hjj" secondAttribute="trailing" id="RkJ-hZ-km6"/>
                 <constraint firstItem="S0O-Hc-boP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="51" id="U9q-wp-zzy"/>
+                <constraint firstItem="QRz-Bs-cG4" firstAttribute="centerY" secondItem="g7h-GR-OsW" secondAttribute="centerY" id="cLM-Q4-Xon"/>
+                <constraint firstAttribute="trailing" secondItem="QRz-Bs-cG4" secondAttribute="trailing" constant="20" id="fXR-4r-Fz2"/>
                 <constraint firstItem="S0O-Hc-boP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ffZ-tR-EF6"/>
                 <constraint firstAttribute="bottom" secondItem="RLD-ts-hjj" secondAttribute="bottom" id="fw3-4s-aQy"/>
                 <constraint firstItem="g7h-GR-OsW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gOl-22-J3h"/>
@@ -138,9 +150,10 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="light_auto" width="21" height="21"/>
-        <image name="pcvision_cancel" width="21" height="21"/>
-        <image name="pcvision_start" width="66" height="66"/>
-        <image name="switch_camera" width="21" height="21"/>
+        <image name="dark_screen" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="light_auto" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="pcvision_cancel" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="pcvision_start" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="switch_camera" width="21.333333969116211" height="21.333333969116211"/>
     </resources>
 </document>
