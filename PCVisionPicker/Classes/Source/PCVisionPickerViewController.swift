@@ -97,9 +97,11 @@ public class PCVisionPickerViewController: UIViewController {
         didSet{
             if recording {
                 btStart.setBackgroundImage(UIImage(named: "pcvision_stop", in: bundle, compatibleWith: nil), for: .normal)
+                btDarkScreen.isHidden = !showDarkScreen
             }
             else {
                 btStart.setBackgroundImage(UIImage(named: "pcvision_start", in: bundle, compatibleWith: nil), for: .normal)
+                btDarkScreen.isHidden = true
             }
         }
     }
@@ -148,7 +150,7 @@ public class PCVisionPickerViewController: UIViewController {
         view.backgroundColor = .black
         return view
     }()
-    
+    /// 是否正在黑屏
     fileprivate var bDarkScreen: Bool = false {
         didSet {
             guard bDarkScreen != oldValue else {return}
@@ -193,7 +195,7 @@ public class PCVisionPickerViewController: UIViewController {
         else {
             lbTime.isHidden = false
         }
-        btDarkScreen.isHidden = !showDarkScreen
+        btDarkScreen.isHidden = true
         if showDarkScreen {
             flashMode = .off
         }
@@ -451,14 +453,16 @@ public class PCVisionPickerViewController: UIViewController {
         if let videoUrl = NextLevel.shared.session?.lastClipUrl,
             let thumb = NextLevel.shared.session?.lastClipThumbnailImage {
             if skipPreview {
-                self.dismiss(animated: true, completion: {
-                    self.handleDone?(thumb,videoUrl)
+                self.dismiss(animated: true, completion: { [weak self] in
+                    self?.bDarkScreen = false
+                    self?.handleDone?(thumb,videoUrl)
                 })
             } else {
                 let ctr = PCVisionPickerPreviewController(nibName: "PCVisionPickerPreviewController", bundle: nil)
                 ctr.videoUrl = videoUrl
                 ctr.handleDone = {[weak self] _,videoUrl in
                     self?.dismiss(animated: true, completion: {
+                        self?.bDarkScreen = false
                         self?.handleDone?(thumb,videoUrl)
                     })
                 }
@@ -488,6 +492,7 @@ public class PCVisionPickerViewController: UIViewController {
     */
     // MARK: - actions
     @IBAction func switchFlashModeAction(_ sender: Any) {
+        guard !bDarkScreen else { return }
         flashMode = flashMode.next()
         if cameraMode == .photo {
             nextLevel.flashMode = flashMode.toNextLevelFlashMode()
@@ -498,10 +503,12 @@ public class PCVisionPickerViewController: UIViewController {
     }
     
     @IBAction func switchCameraAction(_ sender: Any) {
+        guard !bDarkScreen else { return }
         nextLevel.devicePosition = nextLevel.devicePosition.next()
     }
     
     @IBAction func startAction(_ sender: Any) {
+        guard !bDarkScreen else { return }
         if cameraMode == .photo {
             nextLevel.capturePhoto()
         }
@@ -527,6 +534,8 @@ public class PCVisionPickerViewController: UIViewController {
                 SwiftProgressHUD.hideAllHUD()
                 strongSelf.videoDidCaptured()
             }
+        } else {
+            videoDidCaptured()
         }
     }
     public func startVideoCapture() {
@@ -536,17 +545,20 @@ public class PCVisionPickerViewController: UIViewController {
     
     }
     @IBAction func cancelAction(_ sender: Any) {
+        guard !bDarkScreen else { return }
         self.dismiss(animated: true) {
             
         }
     }
     @IBAction func darkScreenAction(_ sender: Any) {
+        guard !bDarkScreen else { return }
         bDarkScreen = true
     }
     
     
     
     @IBAction func handleFocusTapGesterRecognizer(gestureRecognizer:UIGestureRecognizer) {
+        guard !bDarkScreen else { return }
         let tapPoint = gestureRecognizer.location(in: previewView)
         focusView.center = tapPoint
         previewView.addSubview(focusView)
@@ -711,7 +723,6 @@ extension PCVisionPickerViewController: NextLevelVideoDelegate {
     }
     
     public func nextLevel(_ nextLevel: NextLevel, didCompleteClip clip: NextLevelClip, inSession session: NextLevelSession) {
-        recording = false
         UIApplication.shared.isIdleTimerDisabled = orginIdleTimerDisabled
     }
     
