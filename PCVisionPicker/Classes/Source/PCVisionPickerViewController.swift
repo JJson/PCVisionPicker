@@ -418,14 +418,14 @@ public class PCVisionPickerViewController: UIViewController {
             }
         }
         else {
-            if UIDevice.current.isIPhoneX() {
+//            if UIDevice.current.isIPhoneX() {
                 nextLevel.videoConfiguration.preset = .hd1280x720
 
-            }
-            else {
-                nextLevel.videoConfiguration.preset = .hd1920x1080
-            }
-            nextLevel.videoConfiguration.bitRate = 1920*1080*3
+//            }
+//            else {
+//                nextLevel.videoConfiguration.preset = .hd1920x1080
+//            }
+            nextLevel.videoConfiguration.bitRate = 1280*720*3
             nextLevel.videoConfiguration.profileLevel = AVVideoProfileLevelH264BaselineAutoLevel
             if maxDuration > 0 {
                 nextLevel.videoConfiguration.maximumCaptureDuration = CMTimeMakeWithSeconds(Float64(maxDuration), preferredTimescale: 1)
